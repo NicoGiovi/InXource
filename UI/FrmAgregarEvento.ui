@@ -5,6 +5,14 @@
   <property name="windowModality">
    <enum>Qt::NonModal</enum>
   </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>451</width>
+    <height>703</height>
+   </rect>
+  </property>
   <property name="minimumSize">
    <size>
     <width>0</width>
@@ -65,7 +73,7 @@
    <widget class="QLineEdit" name="TxtValorCondicion">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>150</x>
       <y>40</y>
       <width>41</width>
       <height>20</height>
@@ -75,7 +83,7 @@
    <widget class="QSpinBox" name="SpnValorCondicion">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>150</x>
       <y>40</y>
       <width>42</width>
       <height>22</height>

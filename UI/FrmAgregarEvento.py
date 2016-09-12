@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\OneDrive\Programador InXource\UI\FrmAgregarEvento.ui'
+# Form implementation generated from reading ui file 'C:\OneDrive\Programador InXource\InXource\UI\FrmAgregarEvento.ui'
 #
-# Created: Wed Sep 07 20:14:32 2016
+# Created: Mon Sep 12 10:22:43 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -13,6 +13,7 @@ class Ui_FrmAgregarEvento(object):
     def setupUi(self, FrmAgregarEvento):
         FrmAgregarEvento.setObjectName("FrmAgregarEvento")
         FrmAgregarEvento.setWindowModality(QtCore.Qt.NonModal)
+        FrmAgregarEvento.resize(451, 703)
         FrmAgregarEvento.setMinimumSize(QtCore.QSize(0, 0))
         self.groupBox = QtGui.QGroupBox(FrmAgregarEvento)
         self.groupBox.setGeometry(QtCore.QRect(10, 10, 431, 301))
@@ -27,10 +28,10 @@ class Ui_FrmAgregarEvento(object):
         self.CboListaCondiciones.setGeometry(QtCore.QRect(10, 40, 131, 22))
         self.CboListaCondiciones.setObjectName("CboListaCondiciones")
         self.TxtValorCondicion = QtGui.QLineEdit(self.groupBox)
-        self.TxtValorCondicion.setGeometry(QtCore.QRect(200, 40, 41, 20))
+        self.TxtValorCondicion.setGeometry(QtCore.QRect(150, 40, 41, 20))
         self.TxtValorCondicion.setObjectName("TxtValorCondicion")
         self.SpnValorCondicion = QtGui.QSpinBox(self.groupBox)
-        self.SpnValorCondicion.setGeometry(QtCore.QRect(250, 40, 42, 22))
+        self.SpnValorCondicion.setGeometry(QtCore.QRect(150, 40, 42, 22))
         self.SpnValorCondicion.setSingleStep(1)
         self.SpnValorCondicion.setProperty("value", 25)
         self.SpnValorCondicion.setObjectName("SpnValorCondicion")
