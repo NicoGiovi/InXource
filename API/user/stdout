@@ -1,0 +1,12 @@
+InXource\API\pinguino\obj\application_iface.o: No such file or directory
+Processor: 18f4550
+sdcc: Calling linker...
+at 1: warning 119: don't know what to do with file 'InXource\API\pinguino\lkr\boot2.18f4550.lkr'. file extension unsupported
+at 1: warning 119: don't know what to do with file 'InXource\API\pinguino\core'. file extension unsupported
+at 1: warning 119: don't know what to do with file 'InXource\API\pinguino\libraries'. file extension unsupported
+at 1: warning 119: don't know what to do with file 'InXource\API\user\main.hex'. file extension unsupported
+at 1: warning 119: don't know what to do with file 'F:\OneDrive\Programador'. file extension unsupported
+at 1: warning 119: don't know what to do with file 'F:\OneDrive\Programador'. file extension unsupported
+at 1: warning 119: don't know what to do with file 'F:\OneDrive\Programador'. file extension unsupported
+at 1: warning 119: don't know what to do with file 'F:\OneDrive\Programador'. file extension unsupported
+at 1: warning 119: don't know what to do with file 'F:\OneDrive\Programador'. file extension unsupported

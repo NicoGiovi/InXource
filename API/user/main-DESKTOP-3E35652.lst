@@ -1,0 +1,2009 @@
+gplink-1.4.3 #1198 (Mar 10 2016)
+Copyright (c) 1998-2016 gputils project
+Listing File Generated: 7-23-2016  00:34:59
+ 
+ 
+Address  Value    Disassembly              Source
+-------  -----    -----------              ------
+                                           ;--------------------------------------------------------
+                                           ; File Created by SDCC : free open source ANSI-C Compiler
+                                           ; Version 3.5.5 #9516 (MINGW64)
+                                           ;--------------------------------------------------------
+                                           ; PIC16 port for the Microchip 16-bit core micros
+                                           ;--------------------------------------------------------
+                                           	list	p=18f4550
+                                           	radix	dec
+                                           
+                                           
+                                           ;--------------------------------------------------------
+                                           ; public variables in this module
+                                           ;--------------------------------------------------------
+                                           	global	__cpu_clock_
+                                           	global	_System_readFlashMemory
+                                           	global	_System_getCpuFrequency
+                                           	global	_Delayms
+                                           	global	_pinmode
+                                           	global	_digitalwrite
+                                           	global	_digitalread
+                                           	global	_toggle
+                                           	global	_IO_init
+                                           	global	_IO_digital
+                                           	global	_setup
+                                           	global	_loop
+                                           	global	_epap_in
+                                           	global	_epap_out
+                                           	global	_epapin_init
+                                           	global	_epapout_init
+                                           	global	_pinguino_main
+                                           	global	_mask
+                                           	global	_port
+                                           
+                                           ;--------------------------------------------------------
+                                           ; extern variables in this module
+                                           ;--------------------------------------------------------
+                                           	extern	_SPPCFGbits
+                                           	extern	_SPPEPSbits
+                                           	extern	_SPPCONbits
+                                           	extern	_UFRMLbits
+                                           	extern	_UFRMHbits
+                                           	extern	_UIRbits
+                                           	extern	_UIEbits
+                                           	extern	_UEIRbits
+                                           	extern	_UEIEbits
+                                           	extern	_USTATbits
+                                           	extern	_UCONbits
+                                           	extern	_UADDRbits
+                                           	extern	_UCFGbits
+                                           	extern	_UEP0bits
+                                           	extern	_UEP1bits
+                                           	extern	_UEP2bits
+                                           	extern	_UEP3bits
+                                           	extern	_UEP4bits
+                                           	extern	_UEP5bits
+                                           	extern	_UEP6bits
+                                           	extern	_UEP7bits
+                                           	extern	_UEP8bits
+                                           	extern	_UEP9bits
+                                           	extern	_UEP10bits
+                                           	extern	_UEP11bits
+                                           	extern	_UEP12bits
+                                           	extern	_UEP13bits
+                                           	extern	_UEP14bits
+                                           	extern	_UEP15bits
+                                           	extern	_PORTAbits
+                                           	extern	_PORTBbits
+                                           	extern	_PORTCbits
+                                           	extern	_PORTDbits
+                                           	extern	_PORTEbits
+                                           	extern	_LATAbits
+                                           	extern	_LATBbits
+                                           	extern	_LATCbits
+                                           	extern	_LATDbits
+                                           	extern	_LATEbits
+                                           	extern	_DDRAbits
+                                           	extern	_TRISAbits
+                                           	extern	_DDRBbits
+                                           	extern	_TRISBbits
+                                           	extern	_DDRCbits
+                                           	extern	_TRISCbits
+                                           	extern	_DDRDbits
+                                           	extern	_TRISDbits
+                                           	extern	_DDREbits
+                                           	extern	_TRISEbits
+                                           	extern	_OSCTUNEbits
+                                           	extern	_PIE1bits
+                                           	extern	_PIR1bits
+                                           	extern	_IPR1bits
+                                           	extern	_PIE2bits
+                                           	extern	_PIR2bits
+                                           	extern	_IPR2bits
+                                           	extern	_EECON1bits
+                                           	extern	_RCSTAbits
+                                           	extern	_TXSTAbits
+                                           	extern	_T3CONbits
+                                           	extern	_CMCONbits
+                                           	extern	_CVRCONbits
+                                           	extern	_CCP1ASbits
+                                           	extern	_ECCP1ASbits
+                                           	extern	_CCP1DELbits
+                                           	extern	_ECCP1DELbits
+                                           	extern	_BAUDCONbits
+                                           	extern	_BAUDCTLbits
+                                           	extern	_CCP2CONbits
+                                           	extern	_CCP1CONbits
+                                           	extern	_ECCP1CONbits
+                                           	extern	_ADCON2bits
+                                           	extern	_ADCON1bits
+                                           	extern	_ADCON0bits
+                                           	extern	_SSPCON2bits
+                                           	extern	_SSPCON1bits
+                                           	extern	_SSPSTATbits
+                                           	extern	_T2CONbits
+                                           	extern	_T1CONbits
+                                           	extern	_RCONbits
+                                           	extern	_WDTCONbits
+                                           	extern	_HLVDCONbits
+                                           	extern	_LVDCONbits
+                                           	extern	_OSCCONbits
+                                           	extern	_T0CONbits
+                                           	extern	_STATUSbits
+                                           	extern	_INTCON3bits
+                                           	extern	_INTCON2bits
+                                           	extern	_INTCONbits
+                                           	extern	_STKPTRbits
+                                           	extern	_SPPDATA
+                                           	extern	_SPPCFG
+                                           	extern	_SPPEPS
+                                           	extern	_SPPCON
+                                           	extern	_UFRM
+                                           	extern	_UFRML
+                                           	extern	_UFRMH
+                                           	extern	_UIR
+                                           	extern	_UIE
+                                           	extern	_UEIR
+                                           	extern	_UEIE
+                                           	extern	_USTAT
+                                           	extern	_UCON
+                                           	extern	_UADDR
+                                           	extern	_UCFG
+                                           	extern	_UEP0
+                                           	extern	_UEP1
+                                           	extern	_UEP2
+                                           	extern	_UEP3
+                                           	extern	_UEP4
+                                           	extern	_UEP5
+                                           	extern	_UEP6
+                                           	extern	_UEP7
+                                           	extern	_UEP8
+                                           	extern	_UEP9
+                                           	extern	_UEP10
+                                           	extern	_UEP11
+                                           	extern	_UEP12
+                                           	extern	_UEP13
+                                           	extern	_UEP14
+                                           	extern	_UEP15
+                                           	extern	_PORTA
+                                           	extern	_PORTB
+                                           	extern	_PORTC
+                                           	extern	_PORTD
+                                           	extern	_PORTE
+                                           	extern	_LATA
+                                           	extern	_LATB
+                                           	extern	_LATC
+                                           	extern	_LATD
+                                           	extern	_LATE
+                                           	extern	_DDRA
+                                           	extern	_TRISA
+                                           	extern	_DDRB
+                                           	extern	_TRISB
+                                           	extern	_DDRC
+                                           	extern	_TRISC
+                                           	extern	_DDRD
+                                           	extern	_TRISD
+                                           	extern	_DDRE
+                                           	extern	_TRISE
+                                           	extern	_OSCTUNE
+                                           	extern	_PIE1
+                                           	extern	_PIR1
+                                           	extern	_IPR1
+                                           	extern	_PIE2
+                                           	extern	_PIR2
+                                           	extern	_IPR2
+                                           	extern	_EECON1
+                                           	extern	_EECON2
+                                           	extern	_EEDATA
+                                           	extern	_EEADR
+                                           	extern	_RCSTA
+                                           	extern	_TXSTA
+                                           	extern	_TXREG
+                                           	extern	_RCREG
+                                           	extern	_SPBRG
+                                           	extern	_SPBRGH
+                                           	extern	_T3CON
+                                           	extern	_TMR3
+                                           	extern	_TMR3L
+                                           	extern	_TMR3H
+                                           	extern	_CMCON
+                                           	extern	_CVRCON
+                                           	extern	_CCP1AS
+                                           	extern	_ECCP1AS
+                                           	extern	_CCP1DEL
+                                           	extern	_ECCP1DEL
+                                           	extern	_BAUDCON
+                                           	extern	_BAUDCTL
+                                           	extern	_CCP2CON
+                                           	extern	_CCPR2
+                                           	extern	_CCPR2L
+                                           	extern	_CCPR2H
+                                           	extern	_CCP1CON
+                                           	extern	_ECCP1CON
+                                           	extern	_CCPR1
+                                           	extern	_CCPR1L
+                                           	extern	_CCPR1H
+                                           	extern	_ADCON2
+                                           	extern	_ADCON1
+                                           	extern	_ADCON0
+                                           	extern	_ADRES
+                                           	extern	_ADRESL
+                                           	extern	_ADRESH
+                                           	extern	_SSPCON2
+                                           	extern	_SSPCON1
+                                           	extern	_SSPSTAT
+                                           	extern	_SSPADD
+                                           	extern	_SSPBUF
+                                           	extern	_T2CON
+                                           	extern	_PR2
+                                           	extern	_TMR2
+                                           	extern	_T1CON
+                                           	extern	_TMR1
+                                           	extern	_TMR1L
+                                           	extern	_TMR1H
+                                           	extern	_RCON
+                                           	extern	_WDTCON
+                                           	extern	_HLVDCON
+                                           	extern	_LVDCON
+                                           	extern	_OSCCON
+                                           	extern	_T0CON
+                                           	extern	_TMR0
+                                           	extern	_TMR0L
+                                           	extern	_TMR0H
+                                           	extern	_STATUS
+                                           	extern	_FSR2L
+                                           	extern	_FSR2H
+                                           	extern	_PLUSW2
+                                           	extern	_PREINC2
+                                           	extern	_POSTDEC2
+                                           	extern	_POSTINC2
+                                           	extern	_INDF2
+                                           	extern	_BSR
+                                           	extern	_FSR1L
+                                           	extern	_FSR1H
+                                           	extern	_PLUSW1
+                                           	extern	_PREINC1
+                                           	extern	_POSTDEC1
+                                           	extern	_POSTINC1
+                                           	extern	_INDF1
+                                           	extern	_WREG
+                                           	extern	_FSR0L
+                                           	extern	_FSR0H
+                                           	extern	_PLUSW0
+                                           	extern	_PREINC0
+                                           	extern	_POSTDEC0
+                                           	extern	_POSTINC0
+                                           	extern	_INDF0
+                                           	extern	_INTCON3
+                                           	extern	_INTCON2
+                                           	extern	_INTCON
+                                           	extern	_PROD
+                                           	extern	_PRODL
+                                           	extern	_PRODH
+                                           	extern	_TABLAT
+                                           	extern	_TBLPTR
+                                           	extern	_TBLPTRL
+                                           	extern	_TBLPTRH
+                                           	extern	_TBLPTRU
+                                           	extern	_PC
+                                           	extern	_PCL
+                                           	extern	_PCLATH
+                                           	extern	_PCLATU
+                                           	extern	_STKPTR
+                                           	extern	_TOS
+                                           	extern	_TOSL
+                                           	extern	_TOSH
+                                           	extern	_TOSU
+                                           	extern	__divslong
+                                           	extern	__divulong
+                                           	extern	__mulint
+                                           	extern	_delay100tcy
+                                           
+                                           ;--------------------------------------------------------
+                                           ;	Equates to used internal registers
+                                           ;--------------------------------------------------------
+                                           STATUS	equ	0xfd8
+                                           PCL	equ	0xff9
+                                           PCLATH	equ	0xffa
+                                           PCLATU	equ	0xffb
+                                           WREG	equ	0xfe8
+                                           TBLPTRL	equ	0xff6
+                                           TBLPTRH	equ	0xff7
+                                           TBLPTRU	equ	0xff8
+                                           TABLAT	equ	0xff5
+                                           FSR0L	equ	0xfe9
+                                           FSR1L	equ	0xfe1
+                                           FSR2L	equ	0xfd9
+                                           POSTINC1	equ	0xfe6
+                                           POSTDEC1	equ	0xfe5
+                                           PREINC1	equ	0xfe4
+                                           PLUSW2	equ	0xfdb
+                                           PRODL	equ	0xff3
+                                           PRODH	equ	0xff4
+                                           
+                                           
+                                           ; Internal registers
+                                           .registers	udata_ovr	0x0000
+                                           r0x00	res	1
+                                           r0x01	res	1
+                                           r0x02	res	1
+                                           r0x03	res	1
+                                           r0x04	res	1
+                                           r0x05	res	1
+                                           r0x06	res	1
+                                           r0x07	res	1
+                                           
+                                           udata_main_0	udata
+                                           __cpu_clock_	res	4
+                                           
+                                           ;--------------------------------------------------------
+                                           ; global & static initialisations
+                                           ;--------------------------------------------------------
+                                           ; I code from now on!
+                                           ; ; Starting pCode block
+                                           S_main__pinguino_main	code
+                                           _pinguino_main:
+                                           ;	.line	149; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	if (RCONbits.NOT_POR == 0)
+003110   b2d0     btfsc   0xd0, 0x1, 0x0   	BTFSC	_RCONbits, 1
+003112   d002     bra     0x003118         	BRA	_00341_DS_
+                                           ;	.line	151; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	RCON |= 0b10010011;         // set all reset flag
+003114   0e93     movlw   0x93             	MOVLW	0x93
+003116   12d0     iorwf   0xd0, 0x1, 0x0   	IORWF	_RCON, F
+                                           _00341_DS_:
+                                           ;	.line	197; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	if (OSCCONbits.SCS > 0x01)
+003118   50d3     movf    0xd3, 0x0, 0x0   	MOVF	_OSCCONbits, W
+00311a   0b03     andlw   0x03             	ANDLW	0x03
+                                           ; #	MOVWF	r0x00
+                                           ; #	MOVF	r0x00, W
+00311c   0f80     addlw   0x80             	ADDLW	0x80
+00311e   0f7e     addlw   0x7e             	ADDLW	0x7e
+003120   e302     bnc     0x003126         	BNC	_00346_DS_
+                                           _00342_DS_:
+                                           ;	.line	199; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	while (!OSCCONbits.IOFS);
+003122   a4d3     btfss   0xd3, 0x2, 0x0   	BTFSS	_OSCCONbits, 2
+003124   d7fe     bra     0x003122         	BRA	_00342_DS_
+                                           _00346_DS_:
+                                           ;	.line	243; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	IO_init();
+003126   ec9d     call    0x00313a, 0x0call    0x00313a, 0x0 	CALL	_IO_init
+003128   f018
+                                           ;	.line	244; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	IO_digital();
+00312a   ecd9     call    0x0031b2, 0x0call    0x0031b2, 0x0 	CALL	_IO_digital
+00312c   f018
+                                           ;	.line	300; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	setup();
+00312e   ecca     call    0x003194, 0x0call    0x003194, 0x0 	CALL	_setup
+003130   f018
+                                           _00348_DS_:
+                                           ;	.line	327; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	loop();
+003132   ecb1     call    0x003162, 0x0call    0x003162, 0x0 	CALL	_loop
+003134   f018
+003136   d7fd     bra     0x003132         	BRA	_00348_DS_
+003138   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__epapout_init	code
+                                           _epapout_init:
+                                           ;	.line	99; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	void epapout_init() { return; }
+0031c4   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__epapin_init	code
+                                           _epapin_init:
+                                           ;	.line	98; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	void epapin_init()  { return; }
+0031c6   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__epap_out	code
+                                           _epap_out:
+                                           ;	.line	97; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	void epap_out()     { return; }
+0031c8   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__epap_in	code
+                                           _epap_in:
+                                           ;	.line	96; D:\OneDrive\API_PINGUINO_18F4550\API\user\main.c	void epap_in()      { return; }
+0031ca   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__loop	code
+                                           _loop:
+                                           ;	.line	13; D:\OneDrive\API_PINGUINO_18F4550\API\user\/user.c	toggle(USERLED);    
+003162   0e1d     movlw   0x1d             	MOVLW	0x1d
+003164   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+003166   ec67     call    0x0030ce, 0x0call    0x0030ce, 0x0 	CALL	_toggle
+003168   f018
+00316a   52e6     movf    0xe6, 0x1, 0x0   	MOVF	POSTINC1, F
+                                           ;	.line	14; D:\OneDrive\API_PINGUINO_18F4550\API\user\/user.c	Delayms(200);        
+00316c   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+00316e   0ec8     movlw   0xc8             	MOVLW	0xc8
+003170   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+003172   ec65     call    0x002eca, 0x0call    0x002eca, 0x0 	CALL	_Delayms
+003174   f017
+003176   52e6     movf    0xe6, 0x1, 0x0   	MOVF	POSTINC1, F
+003178   52e6     movf    0xe6, 0x1, 0x0   	MOVF	POSTINC1, F
+00317a   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__setup	code
+                                           _setup:
+                                           ;	.line	8; D:\OneDrive\API_PINGUINO_18F4550\API\user\/user.c	pinmode(USERLED, OUTPUT);   
+003194   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+003196   0e1d     movlw   0x1d             	MOVLW	0x1d
+003198   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+00319a   ec0f     call    0x00261e, 0x0call    0x00261e, 0x0 	CALL	_pinmode
+00319c   f013
+00319e   52e6     movf    0xe6, 0x1, 0x0   	MOVF	POSTINC1, F
+0031a0   52e6     movf    0xe6, 0x1, 0x0   	MOVF	POSTINC1, F
+0031a2   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__IO_digital	code
+                                           _IO_digital:
+                                           ;	.line	123; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	ADCON1 = 0x0F;				// AN0 to AN12 Digital I/O
+0031b2   0e0f     movlw   0x0f             	MOVLW	0x0f
+0031b4   6ec1     movwf   0xc1, 0x0        	MOVWF	_ADCON1
+                                           ;	.line	124; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	CMCON = 0x07;               // Comparators as Digital I/O
+0031b6   0e07     movlw   0x07             	MOVLW	0x07
+0031b8   6eb4     movwf   0xb4, 0x0        	MOVWF	_CMCON
+0031ba   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__IO_init	code
+                                           _IO_init:
+                                           ;	.line	53; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	LATA  = 0x00;
+00313a   6a89     clrf    0x89, 0x0        	CLRF	_LATA
+                                           ;	.line	54; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	LATB  = 0x00;
+00313c   6a8a     clrf    0x8a, 0x0        	CLRF	_LATB
+                                           ;	.line	72; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	LATC  = 0x00;
+00313e   6a8b     clrf    0x8b, 0x0        	CLRF	_LATC
+                                           ;	.line	79; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	LATD  = 0x00; 
+003140   6a8c     clrf    0x8c, 0x0        	CLRF	_LATD
+                                           ;	.line	80; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	LATE  = 0x00; 
+003142   6a8d     clrf    0x8d, 0x0        	CLRF	_LATE
+                                           ;	.line	83; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	TRISA = 0x00;
+003144   6a92     clrf    0x92, 0x0        	CLRF	_TRISA
+                                           ;	.line	85; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	TRISB = 0x00;
+003146   6a93     clrf    0x93, 0x0        	CLRF	_TRISB
+                                           ;	.line	91; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	TRISCbits.TRISC0 = 0x00;
+003148   9094     bcf     0x94, 0x0, 0x0   	BCF	_TRISCbits, 0
+                                           ;	.line	92; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	TRISCbits.TRISC1 = 0x00;
+00314a   9294     bcf     0x94, 0x1, 0x0   	BCF	_TRISCbits, 1
+                                           ;	.line	93; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	TRISCbits.TRISC2 = 0x00;
+00314c   9494     bcf     0x94, 0x2, 0x0   	BCF	_TRISCbits, 2
+                                           ;	.line	94; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	TRISCbits.TRISC6 = 0x00;
+00314e   9c94     bcf     0x94, 0x6, 0x0   	BCF	_TRISCbits, 6
+                                           ;	.line	95; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	TRISCbits.TRISC7 = 0x00;
+003150   9e94     bcf     0x94, 0x7, 0x0   	BCF	_TRISCbits, 7
+                                           ;	.line	101; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	TRISD = 0x00; 
+003152   6a95     clrf    0x95, 0x0        	CLRF	_TRISD
+                                           ;	.line	102; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	TRISE = 0x00; 
+003154   6a96     clrf    0x96, 0x0        	CLRF	_TRISE
+                                           ;	.line	106; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	PORTA  = 0x00;
+003156   6a80     clrf    0x80, 0x0        	CLRF	_PORTA
+                                           ;	.line	107; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	PORTB  = 0x00;
+003158   6a81     clrf    0x81, 0x0        	CLRF	_PORTB
+                                           ;	.line	108; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	PORTC  = 0x00;
+00315a   6a82     clrf    0x82, 0x0        	CLRF	_PORTC
+                                           ;	.line	112; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	PORTD  = 0x00; 
+00315c   6a83     clrf    0x83, 0x0        	CLRF	_PORTD
+                                           ;	.line	113; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/io.c	PORTE  = 0x00; 
+00315e   6a84     clrf    0x84, 0x0        	CLRF	_PORTE
+003160   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__toggle	code
+                                           _toggle:
+                                           ;	.line	47; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalt.c	void toggle(u8 pin)
+0030ce   cfd9     movff   0xfd9, 0xfe5     	MOVFF	FSR2L, POSTDEC1
+0030d0   ffe5
+0030d2   cfe1     movff   0xfe1, 0xfd9     	MOVFF	FSR1L, FSR2L
+0030d4   ffd9
+0030d6   c000     movff   0x000, 0xfe5     	MOVFF	r0x00, POSTDEC1
+0030d8   ffe5
+0030da   c001     movff   0x001, 0xfe5     	MOVFF	r0x01, POSTDEC1
+0030dc   ffe5
+0030de   0e02     movlw   0x02             	MOVLW	0x02
+0030e0   cfdb     movff   0xfdb, 0x000     	MOVFF	PLUSW2, r0x00
+0030e2   f000
+                                           ;	.line	50; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalt.c	state = digitalread(pin);
+0030e4   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+0030e6   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+0030e8   ec31     call    0x002a62, 0x0call    0x002a62, 0x0 	CALL	_digitalread
+0030ea   f015
+0030ec   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+0030ee   52e6     movf    0xe6, 0x1, 0x0   	MOVF	POSTINC1, F
+                                           ;	.line	51; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalt.c	digitalwrite(pin, state^1);
+0030f0   7001     btg     0x01, 0x0, 0x0   	BTG	r0x01, 0
+0030f2   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+0030f4   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+0030f6   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+0030f8   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+0030fa   ece0     call    0x0023c0, 0x0call    0x0023c0, 0x0 	CALL	_digitalwrite
+0030fc   f011
+0030fe   52e6     movf    0xe6, 0x1, 0x0   	MOVF	POSTINC1, F
+003100   52e6     movf    0xe6, 0x1, 0x0   	MOVF	POSTINC1, F
+003102   cfe4     movff   0xfe4, 0x001     	MOVFF	PREINC1, r0x01
+003104   f001
+003106   cfe4     movff   0xfe4, 0x000     	MOVFF	PREINC1, r0x00
+003108   f000
+00310a   cfe4     movff   0xfe4, 0xfd9     	MOVFF	PREINC1, FSR2L
+00310c   ffd9
+00310e   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__digitalread	code
+                                           _digitalread:
+                                           ;	.line	48; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalr.c	u8 digitalread(u8 pin)
+002a62   cfd9     movff   0xfd9, 0xfe5     	MOVFF	FSR2L, POSTDEC1
+002a64   ffe5
+002a66   cfe1     movff   0xfe1, 0xfd9     	MOVFF	FSR1L, FSR2L
+002a68   ffd9
+002a6a   c000     movff   0x000, 0xfe5     	MOVFF	r0x00, POSTDEC1
+002a6c   ffe5
+002a6e   c001     movff   0x001, 0xfe5     	MOVFF	r0x01, POSTDEC1
+002a70   ffe5
+002a72   c002     movff   0x002, 0xfe5     	MOVFF	r0x02, POSTDEC1
+002a74   ffe5
+002a76   c003     movff   0x003, 0xfe5     	MOVFF	r0x03, POSTDEC1
+002a78   ffe5
+002a7a   0e02     movlw   0x02             	MOVLW	0x02
+002a7c   cfdb     movff   0xfdb, 0x000     	MOVFF	PLUSW2, r0x00
+002a7e   f000
+                                           ;	.line	54; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalr.c	switch (port[pin])
+002a80   0e7c     movlw   0x7c             	MOVLW	LOW(_port)
+002a82   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002a84   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002a86   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+002a88   0e23     movlw   0x23             	MOVLW	HIGH(_port)
+002a8a   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+002a8c   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002a8e   0e00     movlw   0x00             	MOVLW	UPPER(_port)
+002a90   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002a92   c001     movff   0x001, 0xff6     	MOVFF	r0x01, TBLPTRL
+002a94   fff6
+002a96   c002     movff   0x002, 0xff7     	MOVFF	r0x02, TBLPTRH
+002a98   fff7
+002a9a   c003     movff   0x003, 0xff8     	MOVFF	r0x03, TBLPTRU
+002a9c   fff8
+002a9e   0009     tblrd*+                  	TBLRD*+	
+002aa0   cff5     movff   0xff5, 0x001     	MOVFF	TABLAT, r0x01
+002aa2   f001
+002aa4   0e05     movlw   0x05             	MOVLW	0x05
+002aa6   5c01     subwf   0x01, 0x0, 0x0   	SUBWF	r0x01, W
+002aa8   b0d8     btfsc   0xd8, 0x0, 0x0   	BTFSC	STATUS, 0
+002aaa   d0a4     bra     0x002bf4         	BRA	_00258_DS_
+002aac   6afa     clrf    0xfa, 0x0        	CLRF	PCLATH
+002aae   6afb     clrf    0xfb, 0x0        	CLRF	PCLATU
+002ab0   3401     rlcf    0x01, 0x0, 0x0   	RLCF	r0x01, W
+002ab2   36fa     rlcf    0xfa, 0x1, 0x0   	RLCF	PCLATH, F
+002ab4   34e8     rlcf    0xe8, 0x0, 0x0   	RLCF	WREG, W
+002ab6   36fa     rlcf    0xfa, 0x1, 0x0   	RLCF	PCLATH, F
+002ab8   0bfc     andlw   0xfc             	ANDLW	0xfc
+002aba   0fca     addlw   0xca             	ADDLW	LOW(_00290_DS_)
+002abc   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002abe   0e2a     movlw   0x2a             	MOVLW	HIGH(_00290_DS_)
+002ac0   22fa     addwfc  0xfa, 0x1, 0x0   	ADDWFC	PCLATH, F
+002ac2   0e00     movlw   0x00             	MOVLW	UPPER(_00290_DS_)
+002ac4   22fb     addwfc  0xfb, 0x1, 0x0   	ADDWFC	PCLATU, F
+002ac6   50e4     movf    0xe4, 0x0, 0x0   	MOVF	PREINC1, W
+002ac8   6ef9     movwf   0xf9, 0x0        	MOVWF	PCL
+                                           _00290_DS_:
+002aca   ef6f     goto    0x002ade         	GOTO	_00253_DS_
+002acc   f015
+002ace   ef8b     goto    0x002b16         	GOTO	_00254_DS_
+002ad0   f015
+002ad2   efa7     goto    0x002b4e         	GOTO	_00255_DS_
+002ad4   f015
+002ad6   efc3     goto    0x002b86         	GOTO	_00256_DS_
+002ad8   f015
+002ada   efdf     goto    0x002bbe         	GOTO	_00257_DS_
+002adc   f015
+                                           _00253_DS_:
+                                           ;	.line	57; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalr.c	return ((PORTA & mask[pin])!=0);
+002ade   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002ae0   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002ae2   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002ae4   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+002ae6   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002ae8   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+002aea   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002aec   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002aee   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002af0   c001     movff   0x001, 0xff6     	MOVFF	r0x01, TBLPTRL
+002af2   fff6
+002af4   c002     movff   0x002, 0xff7     	MOVFF	r0x02, TBLPTRH
+002af6   fff7
+002af8   c003     movff   0x003, 0xff8     	MOVFF	r0x03, TBLPTRU
+002afa   fff8
+002afc   0009     tblrd*+                  	TBLRD*+	
+002afe   cff5     movff   0xff5, 0x001     	MOVFF	TABLAT, r0x01
+002b00   f001
+002b02   5080     movf    0x80, 0x0, 0x0   	MOVF	_PORTA, W
+002b04   1601     andwf   0x01, 0x1, 0x0   	ANDWF	r0x01, F
+002b06   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002b08   e003     bz      0x002b10         	BZ	_00261_DS_
+002b0a   0e01     movlw   0x01             	MOVLW	0x01
+002b0c   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002b0e   d001     bra     0x002b12         	BRA	_00262_DS_
+                                           _00261_DS_:
+002b10   6a01     clrf    0x01, 0x0        	CLRF	r0x01
+                                           _00262_DS_:
+002b12   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002b14   d070     bra     0x002bf6         	BRA	_00259_DS_
+                                           _00254_DS_:
+                                           ;	.line	60; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalr.c	return ((PORTB & mask[pin])!=0);
+002b16   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002b18   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002b1a   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002b1c   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+002b1e   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002b20   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+002b22   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002b24   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002b26   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002b28   c001     movff   0x001, 0xff6     	MOVFF	r0x01, TBLPTRL
+002b2a   fff6
+002b2c   c002     movff   0x002, 0xff7     	MOVFF	r0x02, TBLPTRH
+002b2e   fff7
+002b30   c003     movff   0x003, 0xff8     	MOVFF	r0x03, TBLPTRU
+002b32   fff8
+002b34   0009     tblrd*+                  	TBLRD*+	
+002b36   cff5     movff   0xff5, 0x001     	MOVFF	TABLAT, r0x01
+002b38   f001
+002b3a   5081     movf    0x81, 0x0, 0x0   	MOVF	_PORTB, W
+002b3c   1601     andwf   0x01, 0x1, 0x0   	ANDWF	r0x01, F
+002b3e   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002b40   e003     bz      0x002b48         	BZ	_00263_DS_
+002b42   0e01     movlw   0x01             	MOVLW	0x01
+002b44   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002b46   d001     bra     0x002b4a         	BRA	_00264_DS_
+                                           _00263_DS_:
+002b48   6a01     clrf    0x01, 0x0        	CLRF	r0x01
+                                           _00264_DS_:
+002b4a   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002b4c   d054     bra     0x002bf6         	BRA	_00259_DS_
+                                           _00255_DS_:
+                                           ;	.line	63; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalr.c	return ((PORTC & mask[pin])!=0);
+002b4e   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002b50   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002b52   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002b54   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+002b56   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002b58   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+002b5a   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002b5c   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002b5e   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002b60   c001     movff   0x001, 0xff6     	MOVFF	r0x01, TBLPTRL
+002b62   fff6
+002b64   c002     movff   0x002, 0xff7     	MOVFF	r0x02, TBLPTRH
+002b66   fff7
+002b68   c003     movff   0x003, 0xff8     	MOVFF	r0x03, TBLPTRU
+002b6a   fff8
+002b6c   0009     tblrd*+                  	TBLRD*+	
+002b6e   cff5     movff   0xff5, 0x001     	MOVFF	TABLAT, r0x01
+002b70   f001
+002b72   5082     movf    0x82, 0x0, 0x0   	MOVF	_PORTC, W
+002b74   1601     andwf   0x01, 0x1, 0x0   	ANDWF	r0x01, F
+002b76   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002b78   e003     bz      0x002b80         	BZ	_00265_DS_
+002b7a   0e01     movlw   0x01             	MOVLW	0x01
+002b7c   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002b7e   d001     bra     0x002b82         	BRA	_00266_DS_
+                                           _00265_DS_:
+002b80   6a01     clrf    0x01, 0x0        	CLRF	r0x01
+                                           _00266_DS_:
+002b82   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002b84   d038     bra     0x002bf6         	BRA	_00259_DS_
+                                           _00256_DS_:
+                                           ;	.line	70; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalr.c	return ((PORTD & mask[pin])!=0);
+002b86   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002b88   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002b8a   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002b8c   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+002b8e   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002b90   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+002b92   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002b94   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002b96   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002b98   c001     movff   0x001, 0xff6     	MOVFF	r0x01, TBLPTRL
+002b9a   fff6
+002b9c   c002     movff   0x002, 0xff7     	MOVFF	r0x02, TBLPTRH
+002b9e   fff7
+002ba0   c003     movff   0x003, 0xff8     	MOVFF	r0x03, TBLPTRU
+002ba2   fff8
+002ba4   0009     tblrd*+                  	TBLRD*+	
+002ba6   cff5     movff   0xff5, 0x001     	MOVFF	TABLAT, r0x01
+002ba8   f001
+002baa   5083     movf    0x83, 0x0, 0x0   	MOVF	_PORTD, W
+002bac   1601     andwf   0x01, 0x1, 0x0   	ANDWF	r0x01, F
+002bae   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002bb0   e003     bz      0x002bb8         	BZ	_00267_DS_
+002bb2   0e01     movlw   0x01             	MOVLW	0x01
+002bb4   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002bb6   d001     bra     0x002bba         	BRA	_00268_DS_
+                                           _00267_DS_:
+002bb8   6a01     clrf    0x01, 0x0        	CLRF	r0x01
+                                           _00268_DS_:
+002bba   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002bbc   d01c     bra     0x002bf6         	BRA	_00259_DS_
+                                           _00257_DS_:
+                                           ;	.line	73; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalr.c	return ((PORTE & mask[pin])!=0);
+002bbe   6a01     clrf    0x01, 0x0        	CLRF	r0x01
+002bc0   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+002bc2   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002bc4   2600     addwf   0x00, 0x1, 0x0   	ADDWF	r0x00, F
+002bc6   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002bc8   2201     addwfc  0x01, 0x1, 0x0   	ADDWFC	r0x01, F
+002bca   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002bcc   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+002bce   c000     movff   0x000, 0xff6     	MOVFF	r0x00, TBLPTRL
+002bd0   fff6
+002bd2   c001     movff   0x001, 0xff7     	MOVFF	r0x01, TBLPTRH
+002bd4   fff7
+002bd6   c002     movff   0x002, 0xff8     	MOVFF	r0x02, TBLPTRU
+002bd8   fff8
+002bda   0009     tblrd*+                  	TBLRD*+	
+002bdc   cff5     movff   0xff5, 0x000     	MOVFF	TABLAT, r0x00
+002bde   f000
+002be0   5084     movf    0x84, 0x0, 0x0   	MOVF	_PORTE, W
+002be2   1600     andwf   0x00, 0x1, 0x0   	ANDWF	r0x00, F
+002be4   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+002be6   e003     bz      0x002bee         	BZ	_00269_DS_
+002be8   0e01     movlw   0x01             	MOVLW	0x01
+002bea   6e00     movwf   0x00, 0x0        	MOVWF	r0x00
+002bec   d001     bra     0x002bf0         	BRA	_00270_DS_
+                                           _00269_DS_:
+002bee   6a00     clrf    0x00, 0x0        	CLRF	r0x00
+                                           _00270_DS_:
+002bf0   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+002bf2   d001     bra     0x002bf6         	BRA	_00259_DS_
+                                           _00258_DS_:
+                                           ;	.line	77; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalr.c	return 0;
+002bf4   6ae8     clrf    0xe8, 0x0        	CLRF	WREG
+                                           _00259_DS_:
+002bf6   cfe4     movff   0xfe4, 0x003     	MOVFF	PREINC1, r0x03
+002bf8   f003
+002bfa   cfe4     movff   0xfe4, 0x002     	MOVFF	PREINC1, r0x02
+002bfc   f002
+002bfe   cfe4     movff   0xfe4, 0x001     	MOVFF	PREINC1, r0x01
+002c00   f001
+002c02   cfe4     movff   0xfe4, 0x000     	MOVFF	PREINC1, r0x00
+002c04   f000
+002c06   cfe4     movff   0xfe4, 0xfd9     	MOVFF	PREINC1, FSR2L
+002c08   ffd9
+002c0a   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__digitalwrite	code
+                                           _digitalwrite:
+                                           ;	.line	48; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	void digitalwrite(u8 pin, u8 state)
+0023c0   cfd9     movff   0xfd9, 0xfe5     	MOVFF	FSR2L, POSTDEC1
+0023c2   ffe5
+0023c4   cfe1     movff   0xfe1, 0xfd9     	MOVFF	FSR1L, FSR2L
+0023c6   ffd9
+0023c8   c000     movff   0x000, 0xfe5     	MOVFF	r0x00, POSTDEC1
+0023ca   ffe5
+0023cc   c001     movff   0x001, 0xfe5     	MOVFF	r0x01, POSTDEC1
+0023ce   ffe5
+0023d0   c002     movff   0x002, 0xfe5     	MOVFF	r0x02, POSTDEC1
+0023d2   ffe5
+0023d4   c003     movff   0x003, 0xfe5     	MOVFF	r0x03, POSTDEC1
+0023d6   ffe5
+0023d8   c004     movff   0x004, 0xfe5     	MOVFF	r0x04, POSTDEC1
+0023da   ffe5
+0023dc   0e02     movlw   0x02             	MOVLW	0x02
+0023de   cfdb     movff   0xfdb, 0x000     	MOVFF	PLUSW2, r0x00
+0023e0   f000
+0023e2   0e03     movlw   0x03             	MOVLW	0x03
+0023e4   cfdb     movff   0xfdb, 0x001     	MOVFF	PLUSW2, r0x01
+0023e6   f001
+                                           ;	.line	54; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	switch (port[pin])
+0023e8   0e7c     movlw   0x7c             	MOVLW	LOW(_port)
+0023ea   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+0023ec   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+0023ee   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+0023f0   0e23     movlw   0x23             	MOVLW	HIGH(_port)
+0023f2   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+0023f4   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+0023f6   0e00     movlw   0x00             	MOVLW	UPPER(_port)
+0023f8   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+0023fa   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+0023fc   fff6
+0023fe   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+002400   fff7
+002402   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+002404   fff8
+002406   0009     tblrd*+                  	TBLRD*+	
+002408   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+00240a   f002
+00240c   0e05     movlw   0x05             	MOVLW	0x05
+00240e   5c02     subwf   0x02, 0x0, 0x0   	SUBWF	r0x02, W
+002410   b0d8     btfsc   0xd8, 0x0, 0x0   	BTFSC	STATUS, 0
+002412   d0f8     bra     0x002604         	BRA	_00227_DS_
+002414   6afa     clrf    0xfa, 0x0        	CLRF	PCLATH
+002416   6afb     clrf    0xfb, 0x0        	CLRF	PCLATU
+002418   3402     rlcf    0x02, 0x0, 0x0   	RLCF	r0x02, W
+00241a   36fa     rlcf    0xfa, 0x1, 0x0   	RLCF	PCLATH, F
+00241c   34e8     rlcf    0xe8, 0x0, 0x0   	RLCF	WREG, W
+00241e   36fa     rlcf    0xfa, 0x1, 0x0   	RLCF	PCLATH, F
+002420   0bfc     andlw   0xfc             	ANDLW	0xfc
+002422   0f32     addlw   0x32             	ADDLW	LOW(_00248_DS_)
+002424   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002426   0e24     movlw   0x24             	MOVLW	HIGH(_00248_DS_)
+002428   22fa     addwfc  0xfa, 0x1, 0x0   	ADDWFC	PCLATH, F
+00242a   0e00     movlw   0x00             	MOVLW	UPPER(_00248_DS_)
+00242c   22fb     addwfc  0xfb, 0x1, 0x0   	ADDWFC	PCLATU, F
+00242e   50e4     movf    0xe4, 0x0, 0x0   	MOVF	PREINC1, W
+002430   6ef9     movwf   0xf9, 0x0        	MOVWF	PCL
+                                           _00248_DS_:
+002432   ef23     goto    0x002446         	GOTO	_00206_DS_
+002434   f012
+002436   ef50     goto    0x0024a0         	GOTO	_00210_DS_
+002438   f012
+00243a   ef7d     goto    0x0024fa         	GOTO	_00214_DS_
+00243c   f012
+00243e   efaa     goto    0x002554         	GOTO	_00218_DS_
+002440   f012
+002442   efd7     goto    0x0025ae         	GOTO	_00222_DS_
+002444   f012
+                                           _00206_DS_:
+                                           ;	.line	57; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	if (state) LATA=LATA | mask[pin];
+002446   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002448   e015     bz      0x002474         	BZ	_00208_DS_
+00244a   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+00244c   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+00244e   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+002450   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002452   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002454   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002456   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+002458   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+00245a   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+00245c   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+00245e   fff6
+002460   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+002462   fff7
+002464   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+002466   fff8
+002468   0009     tblrd*+                  	TBLRD*+	
+00246a   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+00246c   f002
+00246e   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002470   1289     iorwf   0x89, 0x1, 0x0   	IORWF	_LATA, F
+002472   d0c8     bra     0x002604         	BRA	_00227_DS_
+                                           _00208_DS_:
+                                           ;	.line	58; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	else LATA=LATA & (255-mask[pin]);
+002474   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002476   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002478   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+00247a   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+00247c   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+00247e   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002480   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+002482   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002484   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+002486   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+002488   fff6
+00248a   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+00248c   fff7
+00248e   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+002490   fff8
+002492   0009     tblrd*+                  	TBLRD*+	
+002494   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+002496   f002
+002498   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+00249a   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x02
+                                           ; #	MOVF	r0x02, W
+00249c   1689     andwf   0x89, 0x1, 0x0   	ANDWF	_LATA, F
+                                           ;	.line	59; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	break;
+00249e   d0b2     bra     0x002604         	BRA	_00227_DS_
+                                           _00210_DS_:
+                                           ;	.line	61; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	if (state) LATB=LATB | mask[pin]; 
+0024a0   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+0024a2   e015     bz      0x0024ce         	BZ	_00212_DS_
+0024a4   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+0024a6   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+0024a8   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+0024aa   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+0024ac   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+0024ae   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+0024b0   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+0024b2   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+0024b4   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+0024b6   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+0024b8   fff6
+0024ba   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+0024bc   fff7
+0024be   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+0024c0   fff8
+0024c2   0009     tblrd*+                  	TBLRD*+	
+0024c4   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+0024c6   f002
+0024c8   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+0024ca   128a     iorwf   0x8a, 0x1, 0x0   	IORWF	_LATB, F
+0024cc   d09b     bra     0x002604         	BRA	_00227_DS_
+                                           _00212_DS_:
+                                           ;	.line	62; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	else LATB=LATB & (255-mask[pin]);
+0024ce   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+0024d0   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+0024d2   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+0024d4   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+0024d6   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+0024d8   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+0024da   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+0024dc   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+0024de   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+0024e0   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+0024e2   fff6
+0024e4   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+0024e6   fff7
+0024e8   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+0024ea   fff8
+0024ec   0009     tblrd*+                  	TBLRD*+	
+0024ee   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+0024f0   f002
+0024f2   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+0024f4   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x02
+                                           ; #	MOVF	r0x02, W
+0024f6   168a     andwf   0x8a, 0x1, 0x0   	ANDWF	_LATB, F
+                                           ;	.line	63; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	break;
+0024f8   d085     bra     0x002604         	BRA	_00227_DS_
+                                           _00214_DS_:
+                                           ;	.line	65; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	if (state) LATC=LATC | mask[pin];
+0024fa   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+0024fc   e015     bz      0x002528         	BZ	_00216_DS_
+0024fe   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002500   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002502   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+002504   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002506   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002508   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+00250a   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+00250c   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+00250e   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+002510   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+002512   fff6
+002514   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+002516   fff7
+002518   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+00251a   fff8
+00251c   0009     tblrd*+                  	TBLRD*+	
+00251e   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+002520   f002
+002522   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002524   128b     iorwf   0x8b, 0x1, 0x0   	IORWF	_LATC, F
+002526   d06e     bra     0x002604         	BRA	_00227_DS_
+                                           _00216_DS_:
+                                           ;	.line	66; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	else LATC=LATC & (255-mask[pin]);
+002528   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+00252a   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+00252c   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+00252e   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002530   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002532   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002534   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+002536   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002538   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+00253a   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+00253c   fff6
+00253e   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+002540   fff7
+002542   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+002544   fff8
+002546   0009     tblrd*+                  	TBLRD*+	
+002548   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+00254a   f002
+00254c   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+00254e   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x02
+                                           ; #	MOVF	r0x02, W
+002550   168b     andwf   0x8b, 0x1, 0x0   	ANDWF	_LATC, F
+                                           ;	.line	67; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	break;
+002552   d058     bra     0x002604         	BRA	_00227_DS_
+                                           _00218_DS_:
+                                           ;	.line	72; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	if (state) LATD=LATD | mask[pin]; 
+002554   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002556   e015     bz      0x002582         	BZ	_00220_DS_
+002558   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+00255a   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+00255c   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+00255e   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002560   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002562   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002564   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+002566   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002568   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+00256a   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+00256c   fff6
+00256e   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+002570   fff7
+002572   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+002574   fff8
+002576   0009     tblrd*+                  	TBLRD*+	
+002578   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+00257a   f002
+00257c   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+00257e   128c     iorwf   0x8c, 0x1, 0x0   	IORWF	_LATD, F
+002580   d041     bra     0x002604         	BRA	_00227_DS_
+                                           _00220_DS_:
+                                           ;	.line	73; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	else LATD=LATD & (255-mask[pin]);
+002582   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002584   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002586   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+002588   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+00258a   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+00258c   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+00258e   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+002590   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002592   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+002594   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+002596   fff6
+002598   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+00259a   fff7
+00259c   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+00259e   fff8
+0025a0   0009     tblrd*+                  	TBLRD*+	
+0025a2   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+0025a4   f002
+0025a6   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+0025a8   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x02
+                                           ; #	MOVF	r0x02, W
+0025aa   168c     andwf   0x8c, 0x1, 0x0   	ANDWF	_LATD, F
+                                           ;	.line	74; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	break;
+0025ac   d02b     bra     0x002604         	BRA	_00227_DS_
+                                           _00222_DS_:
+                                           ;	.line	76; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	if (state) LATE=LATE | mask[pin]; 
+0025ae   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+0025b0   e015     bz      0x0025dc         	BZ	_00224_DS_
+0025b2   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+0025b4   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+0025b6   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+0025b8   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+0025ba   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+0025bc   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+0025be   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+0025c0   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+0025c2   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+0025c4   c001     movff   0x001, 0xff6     	MOVFF	r0x01, TBLPTRL
+0025c6   fff6
+0025c8   c002     movff   0x002, 0xff7     	MOVFF	r0x02, TBLPTRH
+0025ca   fff7
+0025cc   c003     movff   0x003, 0xff8     	MOVFF	r0x03, TBLPTRU
+0025ce   fff8
+0025d0   0009     tblrd*+                  	TBLRD*+	
+0025d2   cff5     movff   0xff5, 0x001     	MOVFF	TABLAT, r0x01
+0025d4   f001
+0025d6   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+0025d8   128d     iorwf   0x8d, 0x1, 0x0   	IORWF	_LATE, F
+0025da   d014     bra     0x002604         	BRA	_00227_DS_
+                                           _00224_DS_:
+                                           ;	.line	77; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	else LATE=LATE & (255-mask[pin]);
+0025dc   6a01     clrf    0x01, 0x0        	CLRF	r0x01
+0025de   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+0025e0   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+0025e2   2600     addwf   0x00, 0x1, 0x0   	ADDWF	r0x00, F
+0025e4   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+0025e6   2201     addwfc  0x01, 0x1, 0x0   	ADDWFC	r0x01, F
+0025e8   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+0025ea   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+0025ec   c000     movff   0x000, 0xff6     	MOVFF	r0x00, TBLPTRL
+0025ee   fff6
+0025f0   c001     movff   0x001, 0xff7     	MOVFF	r0x01, TBLPTRH
+0025f2   fff7
+0025f4   c002     movff   0x002, 0xff8     	MOVFF	r0x02, TBLPTRU
+0025f6   fff8
+0025f8   0009     tblrd*+                  	TBLRD*+	
+0025fa   cff5     movff   0xff5, 0x000     	MOVFF	TABLAT, r0x00
+0025fc   f000
+0025fe   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+002600   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x00
+                                           ; #	MOVF	r0x00, W
+002602   168d     andwf   0x8d, 0x1, 0x0   	ANDWF	_LATE, F
+                                           _00227_DS_:
+                                           ;	.line	80; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalw.c	}
+002604   cfe4     movff   0xfe4, 0x004     	MOVFF	PREINC1, r0x04
+002606   f004
+002608   cfe4     movff   0xfe4, 0x003     	MOVFF	PREINC1, r0x03
+00260a   f003
+00260c   cfe4     movff   0xfe4, 0x002     	MOVFF	PREINC1, r0x02
+00260e   f002
+002610   cfe4     movff   0xfe4, 0x001     	MOVFF	PREINC1, r0x01
+002612   f001
+002614   cfe4     movff   0xfe4, 0x000     	MOVFF	PREINC1, r0x00
+002616   f000
+002618   cfe4     movff   0xfe4, 0xfd9     	MOVFF	PREINC1, FSR2L
+00261a   ffd9
+00261c   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__pinmode	code
+                                           _pinmode:
+                                           ;	.line	44; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	void pinmode(u8 pin, u8 state)
+00261e   cfd9     movff   0xfd9, 0xfe5     	MOVFF	FSR2L, POSTDEC1
+002620   ffe5
+002622   cfe1     movff   0xfe1, 0xfd9     	MOVFF	FSR1L, FSR2L
+002624   ffd9
+002626   c000     movff   0x000, 0xfe5     	MOVFF	r0x00, POSTDEC1
+002628   ffe5
+00262a   c001     movff   0x001, 0xfe5     	MOVFF	r0x01, POSTDEC1
+00262c   ffe5
+00262e   c002     movff   0x002, 0xfe5     	MOVFF	r0x02, POSTDEC1
+002630   ffe5
+002632   c003     movff   0x003, 0xfe5     	MOVFF	r0x03, POSTDEC1
+002634   ffe5
+002636   c004     movff   0x004, 0xfe5     	MOVFF	r0x04, POSTDEC1
+002638   ffe5
+00263a   0e02     movlw   0x02             	MOVLW	0x02
+00263c   cfdb     movff   0xfdb, 0x000     	MOVFF	PLUSW2, r0x00
+00263e   f000
+002640   0e03     movlw   0x03             	MOVLW	0x03
+002642   cfdb     movff   0xfdb, 0x001     	MOVFF	PLUSW2, r0x01
+002644   f001
+                                           ;	.line	46; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	switch (port[pin])
+002646   0e7c     movlw   0x7c             	MOVLW	LOW(_port)
+002648   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+00264a   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+00264c   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+00264e   0e23     movlw   0x23             	MOVLW	HIGH(_port)
+002650   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002652   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+002654   0e00     movlw   0x00             	MOVLW	UPPER(_port)
+002656   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+002658   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+00265a   fff6
+00265c   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+00265e   fff7
+002660   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+002662   fff8
+002664   0009     tblrd*+                  	TBLRD*+	
+002666   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+002668   f002
+00266a   0e05     movlw   0x05             	MOVLW	0x05
+00266c   5c02     subwf   0x02, 0x0, 0x0   	SUBWF	r0x02, W
+00266e   b0d8     btfsc   0xd8, 0x0, 0x0   	BTFSC	STATUS, 0
+002670   d0f8     bra     0x002862         	BRA	_00180_DS_
+002672   6afa     clrf    0xfa, 0x0        	CLRF	PCLATH
+002674   6afb     clrf    0xfb, 0x0        	CLRF	PCLATU
+002676   3402     rlcf    0x02, 0x0, 0x0   	RLCF	r0x02, W
+002678   36fa     rlcf    0xfa, 0x1, 0x0   	RLCF	PCLATH, F
+00267a   34e8     rlcf    0xe8, 0x0, 0x0   	RLCF	WREG, W
+00267c   36fa     rlcf    0xfa, 0x1, 0x0   	RLCF	PCLATH, F
+00267e   0bfc     andlw   0xfc             	ANDLW	0xfc
+002680   0f90     addlw   0x90             	ADDLW	LOW(_00201_DS_)
+002682   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002684   0e26     movlw   0x26             	MOVLW	HIGH(_00201_DS_)
+002686   22fa     addwfc  0xfa, 0x1, 0x0   	ADDWFC	PCLATH, F
+002688   0e00     movlw   0x00             	MOVLW	UPPER(_00201_DS_)
+00268a   22fb     addwfc  0xfb, 0x1, 0x0   	ADDWFC	PCLATU, F
+00268c   50e4     movf    0xe4, 0x0, 0x0   	MOVF	PREINC1, W
+00268e   6ef9     movwf   0xf9, 0x0        	MOVWF	PCL
+                                           _00201_DS_:
+002690   ef52     goto    0x0026a4         	GOTO	_00159_DS_
+002692   f013
+002694   ef7f     goto    0x0026fe         	GOTO	_00163_DS_
+002696   f013
+002698   efac     goto    0x002758         	GOTO	_00167_DS_
+00269a   f013
+00269c   efd9     goto    0x0027b2         	GOTO	_00171_DS_
+00269e   f013
+0026a0   ef06     goto    0x00280c         	GOTO	_00175_DS_
+0026a2   f014
+                                           _00159_DS_:
+                                           ;	.line	49; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	if (state) TRISA=TRISA | mask[pin];
+0026a4   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+0026a6   e015     bz      0x0026d2         	BZ	_00161_DS_
+0026a8   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+0026aa   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+0026ac   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+0026ae   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+0026b0   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+0026b2   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+0026b4   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+0026b6   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+0026b8   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+0026ba   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+0026bc   fff6
+0026be   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+0026c0   fff7
+0026c2   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+0026c4   fff8
+0026c6   0009     tblrd*+                  	TBLRD*+	
+0026c8   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+0026ca   f002
+0026cc   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+0026ce   1292     iorwf   0x92, 0x1, 0x0   	IORWF	_TRISA, F
+0026d0   d0c8     bra     0x002862         	BRA	_00180_DS_
+                                           _00161_DS_:
+                                           ;	.line	50; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	else TRISA=TRISA & (255-mask[pin]);
+0026d2   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+0026d4   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+0026d6   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+0026d8   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+0026da   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+0026dc   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+0026de   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+0026e0   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+0026e2   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+0026e4   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+0026e6   fff6
+0026e8   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+0026ea   fff7
+0026ec   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+0026ee   fff8
+0026f0   0009     tblrd*+                  	TBLRD*+	
+0026f2   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+0026f4   f002
+0026f6   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+0026f8   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x02
+                                           ; #	MOVF	r0x02, W
+0026fa   1692     andwf   0x92, 0x1, 0x0   	ANDWF	_TRISA, F
+                                           ;	.line	51; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	break;
+0026fc   d0b2     bra     0x002862         	BRA	_00180_DS_
+                                           _00163_DS_:
+                                           ;	.line	53; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	if (state) TRISB=TRISB | mask[pin];
+0026fe   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002700   e015     bz      0x00272c         	BZ	_00165_DS_
+002702   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002704   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002706   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+002708   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+00270a   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+00270c   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+00270e   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+002710   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002712   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+002714   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+002716   fff6
+002718   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+00271a   fff7
+00271c   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+00271e   fff8
+002720   0009     tblrd*+                  	TBLRD*+	
+002722   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+002724   f002
+002726   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002728   1293     iorwf   0x93, 0x1, 0x0   	IORWF	_TRISB, F
+00272a   d09b     bra     0x002862         	BRA	_00180_DS_
+                                           _00165_DS_:
+                                           ;	.line	54; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	else TRISB=TRISB & (255-mask[pin]);
+00272c   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+00272e   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002730   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+002732   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002734   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002736   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002738   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+00273a   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+00273c   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+00273e   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+002740   fff6
+002742   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+002744   fff7
+002746   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+002748   fff8
+00274a   0009     tblrd*+                  	TBLRD*+	
+00274c   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+00274e   f002
+002750   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002752   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x02
+                                           ; #	MOVF	r0x02, W
+002754   1693     andwf   0x93, 0x1, 0x0   	ANDWF	_TRISB, F
+                                           ;	.line	55; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	break;
+002756   d085     bra     0x002862         	BRA	_00180_DS_
+                                           _00167_DS_:
+                                           ;	.line	57; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	if (state) TRISC=TRISC | mask[pin];
+002758   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+00275a   e015     bz      0x002786         	BZ	_00169_DS_
+00275c   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+00275e   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002760   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+002762   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+002764   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002766   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002768   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+00276a   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+00276c   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+00276e   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+002770   fff6
+002772   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+002774   fff7
+002776   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+002778   fff8
+00277a   0009     tblrd*+                  	TBLRD*+	
+00277c   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+00277e   f002
+002780   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002782   1294     iorwf   0x94, 0x1, 0x0   	IORWF	_TRISC, F
+002784   d06e     bra     0x002862         	BRA	_00180_DS_
+                                           _00169_DS_:
+                                           ;	.line	58; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	else TRISC=TRISC & (255-mask[pin]);
+002786   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002788   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+00278a   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+00278c   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+00278e   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002790   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002792   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+002794   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002796   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+002798   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+00279a   fff6
+00279c   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+00279e   fff7
+0027a0   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+0027a2   fff8
+0027a4   0009     tblrd*+                  	TBLRD*+	
+0027a6   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+0027a8   f002
+0027aa   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+0027ac   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x02
+                                           ; #	MOVF	r0x02, W
+0027ae   1694     andwf   0x94, 0x1, 0x0   	ANDWF	_TRISC, F
+                                           ;	.line	59; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	break;
+0027b0   d058     bra     0x002862         	BRA	_00180_DS_
+                                           _00171_DS_:
+                                           ;	.line	64; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	if (state) TRISD=TRISD | mask[pin];
+0027b2   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+0027b4   e015     bz      0x0027e0         	BZ	_00173_DS_
+0027b6   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+0027b8   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+0027ba   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+0027bc   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+0027be   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+0027c0   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+0027c2   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+0027c4   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+0027c6   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+0027c8   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+0027ca   fff6
+0027cc   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+0027ce   fff7
+0027d0   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+0027d2   fff8
+0027d4   0009     tblrd*+                  	TBLRD*+	
+0027d6   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+0027d8   f002
+0027da   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+0027dc   1295     iorwf   0x95, 0x1, 0x0   	IORWF	_TRISD, F
+0027de   d041     bra     0x002862         	BRA	_00180_DS_
+                                           _00173_DS_:
+                                           ;	.line	65; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	else TRISD=TRISD & (255-mask[pin]);
+0027e0   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+0027e2   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+0027e4   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+0027e6   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+0027e8   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+0027ea   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+0027ec   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+0027ee   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+0027f0   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+0027f2   c002     movff   0x002, 0xff6     	MOVFF	r0x02, TBLPTRL
+0027f4   fff6
+0027f6   c003     movff   0x003, 0xff7     	MOVFF	r0x03, TBLPTRH
+0027f8   fff7
+0027fa   c004     movff   0x004, 0xff8     	MOVFF	r0x04, TBLPTRU
+0027fc   fff8
+0027fe   0009     tblrd*+                  	TBLRD*+	
+002800   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+002802   f002
+002804   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002806   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x02
+                                           ; #	MOVF	r0x02, W
+002808   1695     andwf   0x95, 0x1, 0x0   	ANDWF	_TRISD, F
+                                           ;	.line	66; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	break;
+00280a   d02b     bra     0x002862         	BRA	_00180_DS_
+                                           _00175_DS_:
+                                           ;	.line	68; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	if (state) TRISE=TRISE | mask[pin];
+00280c   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+00280e   e015     bz      0x00283a         	BZ	_00177_DS_
+002810   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002812   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002814   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002816   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+002818   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+00281a   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+00281c   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+00281e   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002820   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+002822   c001     movff   0x001, 0xff6     	MOVFF	r0x01, TBLPTRL
+002824   fff6
+002826   c002     movff   0x002, 0xff7     	MOVFF	r0x02, TBLPTRH
+002828   fff7
+00282a   c003     movff   0x003, 0xff8     	MOVFF	r0x03, TBLPTRU
+00282c   fff8
+00282e   0009     tblrd*+                  	TBLRD*+	
+002830   cff5     movff   0xff5, 0x001     	MOVFF	TABLAT, r0x01
+002832   f001
+002834   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002836   1296     iorwf   0x96, 0x1, 0x0   	IORWF	_TRISE, F
+002838   d014     bra     0x002862         	BRA	_00180_DS_
+                                           _00177_DS_:
+                                           ;	.line	69; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	else TRISE=TRISE & (255-mask[pin]);
+00283a   6a01     clrf    0x01, 0x0        	CLRF	r0x01
+00283c   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+00283e   0e5e     movlw   0x5e             	MOVLW	LOW(_mask)
+002840   2600     addwf   0x00, 0x1, 0x0   	ADDWF	r0x00, F
+002842   0e23     movlw   0x23             	MOVLW	HIGH(_mask)
+002844   2201     addwfc  0x01, 0x1, 0x0   	ADDWFC	r0x01, F
+002846   0e00     movlw   0x00             	MOVLW	UPPER(_mask)
+002848   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+00284a   c000     movff   0x000, 0xff6     	MOVFF	r0x00, TBLPTRL
+00284c   fff6
+00284e   c001     movff   0x001, 0xff7     	MOVFF	r0x01, TBLPTRH
+002850   fff7
+002852   c002     movff   0x002, 0xff8     	MOVFF	r0x02, TBLPTRU
+002854   fff8
+002856   0009     tblrd*+                  	TBLRD*+	
+002858   cff5     movff   0xff5, 0x000     	MOVFF	TABLAT, r0x00
+00285a   f000
+00285c   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+00285e   08ff     sublw   0xff             	SUBLW	0xff
+                                           ; #	MOVWF	r0x00
+                                           ; #	MOVF	r0x00, W
+002860   1696     andwf   0x96, 0x1, 0x0   	ANDWF	_TRISE, F
+                                           _00180_DS_:
+                                           ;	.line	72; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/digitalp.c	}
+002862   cfe4     movff   0xfe4, 0x004     	MOVFF	PREINC1, r0x04
+002864   f004
+002866   cfe4     movff   0xfe4, 0x003     	MOVFF	PREINC1, r0x03
+002868   f003
+00286a   cfe4     movff   0xfe4, 0x002     	MOVFF	PREINC1, r0x02
+00286c   f002
+00286e   cfe4     movff   0xfe4, 0x001     	MOVFF	PREINC1, r0x01
+002870   f001
+002872   cfe4     movff   0xfe4, 0x000     	MOVFF	PREINC1, r0x00
+002874   f000
+002876   cfe4     movff   0xfe4, 0xfd9     	MOVFF	PREINC1, FSR2L
+002878   ffd9
+00287a   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__Delayms	code
+                                           _Delayms:
+                                           ;	.line	93; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/delayms.c	void Delayms(u16 milliseconds)
+002eca   cfd9     movff   0xfd9, 0xfe5     	MOVFF	FSR2L, POSTDEC1
+002ecc   ffe5
+002ece   cfe1     movff   0xfe1, 0xfd9     	MOVFF	FSR1L, FSR2L
+002ed0   ffd9
+002ed2   c000     movff   0x000, 0xfe5     	MOVFF	r0x00, POSTDEC1
+002ed4   ffe5
+002ed6   c001     movff   0x001, 0xfe5     	MOVFF	r0x01, POSTDEC1
+002ed8   ffe5
+002eda   c002     movff   0x002, 0xfe5     	MOVFF	r0x02, POSTDEC1
+002edc   ffe5
+002ede   c003     movff   0x003, 0xfe5     	MOVFF	r0x03, POSTDEC1
+002ee0   ffe5
+002ee2   c004     movff   0x004, 0xfe5     	MOVFF	r0x04, POSTDEC1
+002ee4   ffe5
+002ee6   c005     movff   0x005, 0xfe5     	MOVFF	r0x05, POSTDEC1
+002ee8   ffe5
+002eea   0e02     movlw   0x02             	MOVLW	0x02
+002eec   cfdb     movff   0xfdb, 0x000     	MOVFF	PLUSW2, r0x00
+002eee   f000
+002ef0   0e03     movlw   0x03             	MOVLW	0x03
+002ef2   cfdb     movff   0xfdb, 0x001     	MOVFF	PLUSW2, r0x01
+002ef4   f001
+                                           ;	.line	100; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/delayms.c	u16 n100tcy = System_getPeripheralFrequency() / 100000;
+002ef6   ec3e     call    0x00287c, 0x0call    0x00287c, 0x0 	CALL	_System_getCpuFrequency
+002ef8   f014
+002efa   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+002efc   cff3     movff   0xff3, 0x003     	MOVFF	PRODL, r0x03
+002efe   f003
+002f00   cff4     movff   0xff4, 0x004     	MOVFF	PRODH, r0x04
+002f02   f004
+002f04   cfe9     movff   0xfe9, 0x005     	MOVFF	FSR0L, r0x05
+002f06   f005
+002f08   90d8     bcf     0xd8, 0x0, 0x0   	BCF	STATUS, 0
+002f0a   3205     rrcf    0x05, 0x1, 0x0   	RRCF	r0x05, F
+002f0c   3204     rrcf    0x04, 0x1, 0x0   	RRCF	r0x04, F
+002f0e   3203     rrcf    0x03, 0x1, 0x0   	RRCF	r0x03, F
+002f10   3202     rrcf    0x02, 0x1, 0x0   	RRCF	r0x02, F
+002f12   90d8     bcf     0xd8, 0x0, 0x0   	BCF	STATUS, 0
+002f14   3205     rrcf    0x05, 0x1, 0x0   	RRCF	r0x05, F
+002f16   3204     rrcf    0x04, 0x1, 0x0   	RRCF	r0x04, F
+002f18   3203     rrcf    0x03, 0x1, 0x0   	RRCF	r0x03, F
+002f1a   3202     rrcf    0x02, 0x1, 0x0   	RRCF	r0x02, F
+002f1c   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+002f1e   0e01     movlw   0x01             	MOVLW	0x01
+002f20   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002f22   0e86     movlw   0x86             	MOVLW	0x86
+002f24   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002f26   0ea0     movlw   0xa0             	MOVLW	0xa0
+002f28   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002f2a   5005     movf    0x05, 0x0, 0x0   	MOVF	r0x05, W
+002f2c   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002f2e   5004     movf    0x04, 0x0, 0x0   	MOVF	r0x04, W
+002f30   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002f32   5003     movf    0x03, 0x0, 0x0   	MOVF	r0x03, W
+002f34   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002f36   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002f38   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002f3a   ecd5     call    0x002daa, 0x0call    0x002daa, 0x0 	CALL	__divulong
+002f3c   f016
+002f3e   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+002f40   0e08     movlw   0x08             	MOVLW	0x08
+002f42   26e1     addwf   0xe1, 0x1, 0x0   	ADDWF	FSR1L, F
+                                           _00151_DS_:
+                                           ;	.line	101; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/delayms.c	while (milliseconds--)
+002f44   c000     movff   0x000, 0x004     	MOVFF	r0x00, r0x04
+002f46   f004
+002f48   c001     movff   0x001, 0x005     	MOVFF	r0x01, r0x05
+002f4a   f005
+002f4c   0eff     movlw   0xff             	MOVLW	0xff
+002f4e   2600     addwf   0x00, 0x1, 0x0   	ADDWF	r0x00, F
+002f50   2201     addwfc  0x01, 0x1, 0x0   	ADDWFC	r0x01, F
+002f52   5004     movf    0x04, 0x0, 0x0   	MOVF	r0x04, W
+002f54   1005     iorwf   0x05, 0x0, 0x0   	IORWF	r0x05, W
+002f56   e008     bz      0x002f68         	BZ	_00154_DS_
+                                           ;	.line	102; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/delayms.c	delay100tcy(n100tcy-3);
+002f58   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002f5a   6e04     movwf   0x04, 0x0        	MOVWF	r0x04
+002f5c   0efd     movlw   0xfd             	MOVLW	0xfd
+002f5e   2604     addwf   0x04, 0x1, 0x0   	ADDWF	r0x04, F
+002f60   5004     movf    0x04, 0x0, 0x0   	MOVF	r0x04, W
+002f62   eccd     call    0x00239a, 0x0call    0x00239a, 0x0 	CALL	_delay100tcy
+002f64   f011
+002f66   d7ee     bra     0x002f44         	BRA	_00151_DS_
+                                           _00154_DS_:
+002f68   cfe4     movff   0xfe4, 0x005     	MOVFF	PREINC1, r0x05
+002f6a   f005
+002f6c   cfe4     movff   0xfe4, 0x004     	MOVFF	PREINC1, r0x04
+002f6e   f004
+002f70   cfe4     movff   0xfe4, 0x003     	MOVFF	PREINC1, r0x03
+002f72   f003
+002f74   cfe4     movff   0xfe4, 0x002     	MOVFF	PREINC1, r0x02
+002f76   f002
+002f78   cfe4     movff   0xfe4, 0x001     	MOVFF	PREINC1, r0x01
+002f7a   f001
+002f7c   cfe4     movff   0xfe4, 0x000     	MOVFF	PREINC1, r0x00
+002f7e   f000
+002f80   cfe4     movff   0xfe4, 0xfd9     	MOVFF	PREINC1, FSR2L
+002f82   ffd9
+002f84   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__System_getCpuFrequency	code
+                                           _System_getCpuFrequency:
+                                           ;	.line	227; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	u32 System_getCpuFrequency() 
+00287c   c000     movff   0x000, 0xfe5     	MOVFF	r0x00, POSTDEC1
+00287e   ffe5
+002880   c001     movff   0x001, 0xfe5     	MOVFF	r0x01, POSTDEC1
+002882   ffe5
+002884   c002     movff   0x002, 0xfe5     	MOVFF	r0x02, POSTDEC1
+002886   ffe5
+002888   c003     movff   0x003, 0xfe5     	MOVFF	r0x03, POSTDEC1
+00288a   ffe5
+00288c   c004     movff   0x004, 0xfe5     	MOVFF	r0x04, POSTDEC1
+00288e   ffe5
+002890   c005     movff   0x005, 0xfe5     	MOVFF	r0x05, POSTDEC1
+002892   ffe5
+                                           ;	.line	242; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	if (OSCCONbits.SCS == 0)
+002894   50d3     movf    0xd3, 0x0, 0x0   	MOVF	_OSCCONbits, W
+002896   0b03     andlw   0x03             	ANDLW	0x03
+002898   6e00     movwf   0x00, 0x0        	MOVWF	r0x00
+00289a   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+00289c   a4d8     btfss   0xd8, 0x2, 0x0   	BTFSS	STATUS, 2
+00289e   d091     bra     0x0029c2         	BRA	_00116_DS_
+                                           ;	.line	268; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	CPUDIV  = ( System_readFlashMemory(__CONFIG1L) & 0b00011000 ) >> 3;
+0028a0   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+0028a2   0e30     movlw   0x30             	MOVLW	0x30
+0028a4   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+0028a6   0e00     movlw   0x00             	MOVLW	0x00
+0028a8   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+0028aa   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+0028ac   ecc3     call    0x002f86, 0x0call    0x002f86, 0x0 	CALL	_System_readFlashMemory
+0028ae   f017
+0028b0   6e00     movwf   0x00, 0x0        	MOVWF	r0x00
+0028b2   0e04     movlw   0x04             	MOVLW	0x04
+0028b4   26e1     addwf   0xe1, 0x1, 0x0   	ADDWF	FSR1L, F
+0028b6   0e18     movlw   0x18             	MOVLW	0x18
+0028b8   1600     andwf   0x00, 0x1, 0x0   	ANDWF	r0x00, F
+0028ba   6a01     clrf    0x01, 0x0        	CLRF	r0x01
+0028bc   90d8     bcf     0xd8, 0x0, 0x0   	BCF	STATUS, 0
+0028be   3201     rrcf    0x01, 0x1, 0x0   	RRCF	r0x01, F
+0028c0   3200     rrcf    0x00, 0x1, 0x0   	RRCF	r0x00, F
+0028c2   90d8     bcf     0xd8, 0x0, 0x0   	BCF	STATUS, 0
+0028c4   3201     rrcf    0x01, 0x1, 0x0   	RRCF	r0x01, F
+0028c6   3200     rrcf    0x00, 0x1, 0x0   	RRCF	r0x00, F
+0028c8   90d8     bcf     0xd8, 0x0, 0x0   	BCF	STATUS, 0
+0028ca   3201     rrcf    0x01, 0x1, 0x0   	RRCF	r0x01, F
+0028cc   3200     rrcf    0x00, 0x1, 0x0   	RRCF	r0x00, F
+                                           ;	.line	269; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	CPUDIV_XTAL = cpudiv_xtal[CPUDIV];
+0028ce   0e3a     movlw   0x3a             	MOVLW	LOW(_cpudiv_xtal)
+0028d0   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+0028d2   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+0028d4   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+0028d6   0e23     movlw   0x23             	MOVLW	HIGH(_cpudiv_xtal)
+0028d8   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+0028da   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+0028dc   0e00     movlw   0x00             	MOVLW	UPPER(_cpudiv_xtal)
+0028de   2203     addwfc  0x03, 0x1, 0x0   	ADDWFC	r0x03, F
+0028e0   c001     movff   0x001, 0xff6     	MOVFF	r0x01, TBLPTRL
+0028e2   fff6
+0028e4   c002     movff   0x002, 0xff7     	MOVFF	r0x02, TBLPTRH
+0028e6   fff7
+0028e8   c003     movff   0x003, 0xff8     	MOVFF	r0x03, TBLPTRU
+0028ea   fff8
+0028ec   0009     tblrd*+                  	TBLRD*+	
+0028ee   cff5     movff   0xff5, 0x001     	MOVFF	TABLAT, r0x01
+0028f0   f001
+                                           ;	.line	270; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	fosc  = System_readFlashMemory(__CONFIG1H) & 0b00001111;
+0028f2   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+0028f4   0e30     movlw   0x30             	MOVLW	0x30
+0028f6   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+0028f8   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+0028fa   0e01     movlw   0x01             	MOVLW	0x01
+0028fc   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+0028fe   ecc3     call    0x002f86, 0x0call    0x002f86, 0x0 	CALL	_System_readFlashMemory
+002900   f017
+002902   6e02     movwf   0x02, 0x0        	MOVWF	r0x02
+002904   0e04     movlw   0x04             	MOVLW	0x04
+002906   26e1     addwf   0xe1, 0x1, 0x0   	ADDWF	FSR1L, F
+002908   0e0f     movlw   0x0f             	MOVLW	0x0f
+00290a   1602     andwf   0x02, 0x1, 0x0   	ANDWF	r0x02, F
+                                           ;	.line	284; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	CPUDIV = cpudiv[CPUDIV];
+00290c   0e36     movlw   0x36             	MOVLW	LOW(_cpudiv)
+00290e   2400     addwf   0x00, 0x0, 0x0   	ADDWF	r0x00, W
+002910   6e03     movwf   0x03, 0x0        	MOVWF	r0x03
+002912   6a04     clrf    0x04, 0x0        	CLRF	r0x04
+002914   0e23     movlw   0x23             	MOVLW	HIGH(_cpudiv)
+002916   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+002918   6a05     clrf    0x05, 0x0        	CLRF	r0x05
+00291a   0e00     movlw   0x00             	MOVLW	UPPER(_cpudiv)
+00291c   2205     addwfc  0x05, 0x1, 0x0   	ADDWFC	r0x05, F
+00291e   c003     movff   0x003, 0xff6     	MOVFF	r0x03, TBLPTRL
+002920   fff6
+002922   c004     movff   0x004, 0xff7     	MOVFF	r0x04, TBLPTRH
+002924   fff7
+002926   c005     movff   0x005, 0xff8     	MOVFF	r0x05, TBLPTRU
+002928   fff8
+00292a   0009     tblrd*+                  	TBLRD*+	
+00292c   cff5     movff   0xff5, 0x000     	MOVFF	TABLAT, r0x00
+00292e   f000
+                                           ;	.line	292; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	fosc >>=1;
+002930   90d8     bcf     0xd8, 0x0, 0x0   	BCF	STATUS, 0
+002932   3202     rrcf    0x02, 0x1, 0x0   	RRCF	r0x02, F
+                                           ;	.line	293; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	if( (fosc==0) || (fosc==2) || (fosc==6) )
+002934   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002936   e006     bz      0x002944         	BZ	_00110_DS_
+002938   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+00293a   0a02     xorlw   0x02             	XORLW	0x02
+00293c   e003     bz      0x002944         	BZ	_00110_DS_
+00293e   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002940   0a06     xorlw   0x06             	XORLW	0x06
+002942   e11f     bnz     0x002982         	BNZ	_00111_DS_
+                                           _00110_DS_:
+                                           ;	.line	295; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	return CRYSTAL / CPUDIV_XTAL;
+002944   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+002946   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+002948   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+00294a   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+00294c   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+00294e   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+002950   0e7a     movlw   0x7a             	MOVLW	0x7a
+002952   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002954   0e12     movlw   0x12             	MOVLW	0x12
+002956   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002958   0e00     movlw   0x00             	MOVLW	0x00
+00295a   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+00295c   ec06     call    0x002c0c, 0x0call    0x002c0c, 0x0 	CALL	__divslong
+00295e   f016
+002960   6e01     movwf   0x01, 0x0        	MOVWF	r0x01
+002962   cff3     movff   0xff3, 0x002     	MOVFF	PRODL, r0x02
+002964   f002
+002966   cff4     movff   0xff4, 0x003     	MOVFF	PRODH, r0x03
+002968   f003
+00296a   cfe9     movff   0xfe9, 0x004     	MOVFF	FSR0L, r0x04
+00296c   f004
+00296e   0e08     movlw   0x08             	MOVLW	0x08
+002970   26e1     addwf   0xe1, 0x1, 0x0   	ADDWF	FSR1L, F
+002972   c004     movff   0x004, 0xfe9     	MOVFF	r0x04, FSR0L
+002974   ffe9
+002976   c003     movff   0x003, 0xff4     	MOVFF	r0x03, PRODH
+002978   fff4
+00297a   c002     movff   0x002, 0xff3     	MOVFF	r0x02, PRODL
+00297c   fff3
+00297e   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002980   d063     bra     0x002a48         	BRA	_00121_DS_
+                                           _00111_DS_:
+                                           ;	.line	299; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	return 96000000UL / CPUDIV;
+002982   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+002984   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+002986   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+002988   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+00298a   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+00298c   0e05     movlw   0x05             	MOVLW	0x05
+00298e   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002990   0eb8     movlw   0xb8             	MOVLW	0xb8
+002992   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002994   0ed8     movlw   0xd8             	MOVLW	0xd8
+002996   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+002998   0e00     movlw   0x00             	MOVLW	0x00
+00299a   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+00299c   ecd5     call    0x002daa, 0x0call    0x002daa, 0x0 	CALL	__divulong
+00299e   f016
+0029a0   6e00     movwf   0x00, 0x0        	MOVWF	r0x00
+0029a2   cff3     movff   0xff3, 0x001     	MOVFF	PRODL, r0x01
+0029a4   f001
+0029a6   cff4     movff   0xff4, 0x002     	MOVFF	PRODH, r0x02
+0029a8   f002
+0029aa   cfe9     movff   0xfe9, 0x003     	MOVFF	FSR0L, r0x03
+0029ac   f003
+0029ae   0e08     movlw   0x08             	MOVLW	0x08
+0029b0   26e1     addwf   0xe1, 0x1, 0x0   	ADDWF	FSR1L, F
+0029b2   c003     movff   0x003, 0xfe9     	MOVFF	r0x03, FSR0L
+0029b4   ffe9
+0029b6   c002     movff   0x002, 0xff4     	MOVFF	r0x02, PRODH
+0029b8   fff4
+0029ba   c001     movff   0x001, 0xff3     	MOVFF	r0x01, PRODL
+0029bc   fff3
+0029be   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+0029c0   d043     bra     0x002a48         	BRA	_00121_DS_
+                                           _00116_DS_:
+                                           ;	.line	312; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	if (OSCCONbits.SCS == 1)
+0029c2   50d3     movf    0xd3, 0x0, 0x0   	MOVF	_OSCCONbits, W
+0029c4   0b03     andlw   0x03             	ANDLW	0x03
+                                           ; #	MOVWF	r0x00
+                                           ; #	MOVF	r0x00, W
+0029c6   0a01     xorlw   0x01             	XORLW	0x01
+0029c8   e106     bnz     0x0029d6         	BNZ	_00118_DS_
+                                           ;	.line	313; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	return 32768;
+0029ca   6ae9     clrf    0xe9, 0x0        	CLRF	FSR0L
+0029cc   6af4     clrf    0xf4, 0x0        	CLRF	PRODH
+0029ce   0e80     movlw   0x80             	MOVLW	0x80
+0029d0   6ef3     movwf   0xf3, 0x0        	MOVWF	PRODL
+0029d2   6ae8     clrf    0xe8, 0x0        	CLRF	WREG
+0029d4   d039     bra     0x002a48         	BRA	_00121_DS_
+                                           _00118_DS_:
+                                           ;	.line	316; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	if (OSCCONbits.SCS >= 2)
+0029d6   50d3     movf    0xd3, 0x0, 0x0   	MOVF	_OSCCONbits, W
+0029d8   0b03     andlw   0x03             	ANDLW	0x03
+                                           ; #	MOVWF	r0x00
+                                           ; #	MOVF	r0x00, W
+0029da   0f80     addlw   0x80             	ADDLW	0x80
+0029dc   0f7e     addlw   0x7e             	ADDLW	0x7e
+0029de   e330     bnc     0x002a40         	BNC	_00120_DS_
+                                           ;	.line	317; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	return ircf[OSCCONbits.IRCF];
+0029e0   50d3     movf    0xd3, 0x0, 0x0   	MOVF	_OSCCONbits, W
+0029e2   38e8     swapf   0xe8, 0x0, 0x0   	SWAPF	WREG, W
+0029e4   0b07     andlw   0x07             	ANDLW	0x07
+0029e6   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+0029e8   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+0029ea   6ae5     clrf    0xe5, 0x0        	CLRF	POSTDEC1
+0029ec   0e04     movlw   0x04             	MOVLW	0x04
+0029ee   6ee5     movwf   0xe5, 0x0        	MOVWF	POSTDEC1
+0029f0   ec27     call    0x00004e, 0x0call    0x00004e, 0x0 	CALL	__mulint
+0029f2   f000
+0029f4   6e00     movwf   0x00, 0x0        	MOVWF	r0x00
+0029f6   cff3     movff   0xff3, 0x001     	MOVFF	PRODL, r0x01
+0029f8   f001
+0029fa   0e04     movlw   0x04             	MOVLW	0x04
+0029fc   26e1     addwf   0xe1, 0x1, 0x0   	ADDWF	FSR1L, F
+0029fe   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+002a00   0e3e     movlw   0x3e             	MOVLW	LOW(_ircf)
+002a02   2600     addwf   0x00, 0x1, 0x0   	ADDWF	r0x00, F
+002a04   0e23     movlw   0x23             	MOVLW	HIGH(_ircf)
+002a06   2201     addwfc  0x01, 0x1, 0x0   	ADDWFC	r0x01, F
+002a08   0e00     movlw   0x00             	MOVLW	UPPER(_ircf)
+002a0a   2202     addwfc  0x02, 0x1, 0x0   	ADDWFC	r0x02, F
+002a0c   c000     movff   0x000, 0xff6     	MOVFF	r0x00, TBLPTRL
+002a0e   fff6
+002a10   c001     movff   0x001, 0xff7     	MOVFF	r0x01, TBLPTRH
+002a12   fff7
+002a14   c002     movff   0x002, 0xff8     	MOVFF	r0x02, TBLPTRU
+002a16   fff8
+002a18   0009     tblrd*+                  	TBLRD*+	
+002a1a   cff5     movff   0xff5, 0x000     	MOVFF	TABLAT, r0x00
+002a1c   f000
+002a1e   0009     tblrd*+                  	TBLRD*+	
+002a20   cff5     movff   0xff5, 0x001     	MOVFF	TABLAT, r0x01
+002a22   f001
+002a24   0009     tblrd*+                  	TBLRD*+	
+002a26   cff5     movff   0xff5, 0x002     	MOVFF	TABLAT, r0x02
+002a28   f002
+002a2a   0009     tblrd*+                  	TBLRD*+	
+002a2c   cff5     movff   0xff5, 0x003     	MOVFF	TABLAT, r0x03
+002a2e   f003
+002a30   c003     movff   0x003, 0xfe9     	MOVFF	r0x03, FSR0L
+002a32   ffe9
+002a34   c002     movff   0x002, 0xff4     	MOVFF	r0x02, PRODH
+002a36   fff4
+002a38   c001     movff   0x001, 0xff3     	MOVFF	r0x01, PRODL
+002a3a   fff3
+002a3c   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+002a3e   d004     bra     0x002a48         	BRA	_00121_DS_
+                                           _00120_DS_:
+                                           ;	.line	319; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	return 0;
+002a40   6ae9     clrf    0xe9, 0x0        	CLRF	FSR0L
+002a42   6af4     clrf    0xf4, 0x0        	CLRF	PRODH
+002a44   6af3     clrf    0xf3, 0x0        	CLRF	PRODL
+002a46   6ae8     clrf    0xe8, 0x0        	CLRF	WREG
+                                           _00121_DS_:
+002a48   cfe4     movff   0xfe4, 0x005     	MOVFF	PREINC1, r0x05
+002a4a   f005
+002a4c   cfe4     movff   0xfe4, 0x004     	MOVFF	PREINC1, r0x04
+002a4e   f004
+002a50   cfe4     movff   0xfe4, 0x003     	MOVFF	PREINC1, r0x03
+002a52   f003
+002a54   cfe4     movff   0xfe4, 0x002     	MOVFF	PREINC1, r0x02
+002a56   f002
+002a58   cfe4     movff   0xfe4, 0x001     	MOVFF	PREINC1, r0x01
+002a5a   f001
+002a5c   cfe4     movff   0xfe4, 0x000     	MOVFF	PREINC1, r0x00
+002a5e   f000
+002a60   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block
+                                           S_main__System_readFlashMemory	code
+                                           _System_readFlashMemory:
+                                           ;	.line	190; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	u16 System_readFlashMemory(u32 address)
+002f86   cfd9     movff   0xfd9, 0xfe5     	MOVFF	FSR2L, POSTDEC1
+002f88   ffe5
+002f8a   cfe1     movff   0xfe1, 0xfd9     	MOVFF	FSR1L, FSR2L
+002f8c   ffd9
+002f8e   c000     movff   0x000, 0xfe5     	MOVFF	r0x00, POSTDEC1
+002f90   ffe5
+002f92   c001     movff   0x001, 0xfe5     	MOVFF	r0x01, POSTDEC1
+002f94   ffe5
+002f96   c002     movff   0x002, 0xfe5     	MOVFF	r0x02, POSTDEC1
+002f98   ffe5
+002f9a   c003     movff   0x003, 0xfe5     	MOVFF	r0x03, POSTDEC1
+002f9c   ffe5
+002f9e   c004     movff   0x004, 0xfe5     	MOVFF	r0x04, POSTDEC1
+002fa0   ffe5
+002fa2   c005     movff   0x005, 0xfe5     	MOVFF	r0x05, POSTDEC1
+002fa4   ffe5
+002fa6   c006     movff   0x006, 0xfe5     	MOVFF	r0x06, POSTDEC1
+002fa8   ffe5
+002faa   c007     movff   0x007, 0xfe5     	MOVFF	r0x07, POSTDEC1
+002fac   ffe5
+002fae   0e02     movlw   0x02             	MOVLW	0x02
+002fb0   cfdb     movff   0xfdb, 0x000     	MOVFF	PLUSW2, r0x00
+002fb2   f000
+002fb4   0e03     movlw   0x03             	MOVLW	0x03
+002fb6   cfdb     movff   0xfdb, 0x001     	MOVFF	PLUSW2, r0x01
+002fb8   f001
+002fba   0e04     movlw   0x04             	MOVLW	0x04
+002fbc   cfdb     movff   0xfdb, 0x002     	MOVFF	PLUSW2, r0x02
+002fbe   f002
+002fc0   0e05     movlw   0x05             	MOVLW	0x05
+002fc2   cfdb     movff   0xfdb, 0x003     	MOVFF	PLUSW2, r0x03
+002fc4   f003
+                                           ;	.line	194; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	TBLPTRU = address >> 16;
+002fc6   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002fc8   6e04     movwf   0x04, 0x0        	MOVWF	r0x04
+002fca   5003     movf    0x03, 0x0, 0x0   	MOVF	r0x03, W
+002fcc   6e05     movwf   0x05, 0x0        	MOVWF	r0x05
+002fce   6a06     clrf    0x06, 0x0        	CLRF	r0x06
+002fd0   6a07     clrf    0x07, 0x0        	CLRF	r0x07
+002fd2   5004     movf    0x04, 0x0, 0x0   	MOVF	r0x04, W
+002fd4   6ef8     movwf   0xf8, 0x0        	MOVWF	_TBLPTRU
+                                           ;	.line	195; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	TBLPTRH = address >> 8;
+002fd6   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002fd8   6e04     movwf   0x04, 0x0        	MOVWF	r0x04
+002fda   5002     movf    0x02, 0x0, 0x0   	MOVF	r0x02, W
+002fdc   6e05     movwf   0x05, 0x0        	MOVWF	r0x05
+002fde   5003     movf    0x03, 0x0, 0x0   	MOVF	r0x03, W
+002fe0   6e06     movwf   0x06, 0x0        	MOVWF	r0x06
+002fe2   6a07     clrf    0x07, 0x0        	CLRF	r0x07
+002fe4   5004     movf    0x04, 0x0, 0x0   	MOVF	r0x04, W
+002fe6   6ef7     movwf   0xf7, 0x0        	MOVWF	_TBLPTRH
+                                           ;	.line	196; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	TBLPTRL = address;
+002fe8   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+002fea   6ef6     movwf   0xf6, 0x0        	MOVWF	_TBLPTRL
+002fec   0009     tblrd*+                  	tblrd*+
+                                           ;	.line	198; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	l8 = TABLAT;
+002fee   cff5     movff   0xff5, 0x000     	MOVFF	_TABLAT, r0x00
+002ff0   f000
+002ff2   0009     tblrd*+                  	tblrd*+
+                                           ;	.line	200; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	h8 = TABLAT;
+002ff4   cff5     movff   0xff5, 0x001     	MOVFF	_TABLAT, r0x01
+002ff6   f001
+                                           ;	.line	202; D:/OneDrive/API_PINGUINO_18F4550/API/pinguino/core/oscillator.c	return ((h8 << 8) + l8);
+002ff8   6a02     clrf    0x02, 0x0        	CLRF	r0x02
+002ffa   5001     movf    0x01, 0x0, 0x0   	MOVF	r0x01, W
+002ffc   6e04     movwf   0x04, 0x0        	MOVWF	r0x04
+002ffe   6a03     clrf    0x03, 0x0        	CLRF	r0x03
+003000   6a05     clrf    0x05, 0x0        	CLRF	r0x05
+003002   5000     movf    0x00, 0x0, 0x0   	MOVF	r0x00, W
+003004   2603     addwf   0x03, 0x1, 0x0   	ADDWF	r0x03, F
+003006   5005     movf    0x05, 0x0, 0x0   	MOVF	r0x05, W
+003008   2204     addwfc  0x04, 0x1, 0x0   	ADDWFC	r0x04, F
+00300a   c004     movff   0x004, 0xff3     	MOVFF	r0x04, PRODL
+00300c   fff3
+00300e   5003     movf    0x03, 0x0, 0x0   	MOVF	r0x03, W
+003010   cfe4     movff   0xfe4, 0x007     	MOVFF	PREINC1, r0x07
+003012   f007
+003014   cfe4     movff   0xfe4, 0x006     	MOVFF	PREINC1, r0x06
+003016   f006
+003018   cfe4     movff   0xfe4, 0x005     	MOVFF	PREINC1, r0x05
+00301a   f005
+00301c   cfe4     movff   0xfe4, 0x004     	MOVFF	PREINC1, r0x04
+00301e   f004
+003020   cfe4     movff   0xfe4, 0x003     	MOVFF	PREINC1, r0x03
+003022   f003
+003024   cfe4     movff   0xfe4, 0x002     	MOVFF	PREINC1, r0x02
+003026   f002
+003028   cfe4     movff   0xfe4, 0x001     	MOVFF	PREINC1, r0x01
+00302a   f001
+00302c   cfe4     movff   0xfe4, 0x000     	MOVFF	PREINC1, r0x00
+00302e   f000
+003030   cfe4     movff   0xfe4, 0xfd9     	MOVFF	PREINC1, FSR2L
+003032   ffd9
+003034   0012     return  0x0              	RETURN	
+                                           
+                                           ; ; Starting pCode block for Ival
+                                           	code
+                                           _cpudiv:
+002336   0302     mulwf   0x02, 0x1        	DB	0x02, 0x03, 0x04, 0x06
+002338   0604     decf    0x04, 0x1, 0x0   
+                                           ; ; Starting pCode block for Ival
+                                           _cpudiv_xtal:
+00233a   0201     mulwf   0x01, 0x0        	DB	0x01, 0x02, 0x03, 0x04
+00233c   0403     decf    0x03, 0x0, 0x0   
+                                           ; ; Starting pCode block for Ival
+                                           _ircf:
+00233e   7a12     btg     0x12, 0x5, 0x0   	DB	0x12, 0x7a, 0x00, 0x00, 0x48, 0xe8, 0x01, 0x00, 0x90, 0xd0, 0x03, 0x00
+002340   0000     nop                      
+002342   e848     dw      0xe848           
+002344   0001     halt                     
+002346   d090     bra     0x002468         
+002348   0003     sleep                    
+00234a   a120     btfss   0x20, 0x0, 0x1   	DB	0x20, 0xa1, 0x07, 0x00, 0x40, 0x42, 0x0f, 0x00, 0x80, 0x84, 0x1e, 0x00
+00234c   0007     daw                      
+00234e   4240     rrncf   0x40, 0x1, 0x0   
+002350   000f     tblwt+*                  
+002352   8480     bsf     0x80, 0x2, 0x0   
+002354   001e     dw      0x001e           
+002356   0900     iorlw   0x00             	DB	0x00, 0x09, 0x3d, 0x00, 0x00, 0x12, 0x7a, 0x00
+002358   003d     dw      0x003d           
+00235a   1200     iorwf   0x00, 0x1, 0x0   
+00235c   007a     dw      0x007a           
+                                           ; ; Starting pCode block for Ival
+                                           _mask:
+00235e   0201     mulwf   0x01, 0x0        	DB	0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x40, 0x80, 0x01, 0x02
+002360   0804     sublw   0x04             
+002362   2010     addwfc  0x10, 0x0, 0x0   
+002364   8040     bsf     0x40, 0x0, 0x0   
+002366   8040     bsf     0x40, 0x0, 0x0   
+002368   0201     mulwf   0x01, 0x0        
+00236a   0104     movlb   0x4              	DB	0x04, 0x01, 0x02, 0x04, 0x08, 0x20, 0x01, 0x02, 0x04, 0x01, 0x02, 0x04
+00236c   0402     decf    0x02, 0x0, 0x0   
+00236e   2008     addwfc  0x08, 0x0, 0x0   
+002370   0201     mulwf   0x01, 0x0        
+002372   0104     movlb   0x4              
+002374   0402     decf    0x02, 0x0, 0x0   
+002376   1008     iorwf   0x08, 0x0, 0x0   	DB	0x08, 0x10, 0x20, 0x40, 0x80, 0x10
+002378   4020     rrncf   0x20, 0x0, 0x0   
+00237a   1080     iorwf   0x80, 0x0, 0x0   
+                                           ; ; Starting pCode block for Ival
+                                           _port:
+00237c   0101     movlb   0x1              	DB	0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x02, 0x02, 0x02, 0x02
+00237e   0101     movlb   0x1              
+002380   0101     movlb   0x1              
+002382   0101     movlb   0x1              
+002384   0202     mulwf   0x02, 0x0        
+002386   0202     mulwf   0x02, 0x0        
+002388   0002     dw      0x0002           	DB	0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x04, 0x04, 0x03, 0x03, 0x03
+00238a   0000     nop                      
+00238c   0000     nop                      
+00238e   0404     decf    0x04, 0x0, 0x0   
+002390   0304     mulwf   0x04, 0x1        
+002392   0303     mulwf   0x03, 0x1        
+002394   0303     mulwf   0x03, 0x1        	DB	0x03, 0x03, 0x03, 0x03, 0x03, 0x00
+002396   0303     mulwf   0x03, 0x1        
+002398   0003     sleep                    
+                                           
+                                           
+                                           ; Statistics:
+                                           ; code size:	 2720 (0x0aa0) bytes ( 2.08%)
+                                           ;           	 1360 (0x0550) words
+                                           ; udata size:	    4 (0x0004) bytes ( 0.22%)
+                                           ; access size:	    8 (0x0008) bytes
+                                           
+                                           
+                                           	end
