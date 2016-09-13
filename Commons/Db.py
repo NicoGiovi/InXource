@@ -11,7 +11,6 @@ class Configuracion:
         ListaCondiciones = []
         self.c.execute("SELECT * FROM Entradas")
         for data in self.c.fetchall():
-            print data
             ListaCondiciones.append(data[1])
         return ListaCondiciones
 
@@ -21,10 +20,9 @@ class Configuracion:
         self.conexion.commit()
 
     def ListarCondiciones(self):
-        pass
-        # ListaCondiciones = []
-        #self.c.execute("SELECT * FROM Condiciones")
-        #for data in self.c.fetchall():
-        #     print data
-         #   ListaCondiciones.append(data[1])
-        #return ListaCondiciones
+        ListaCondiciones = []
+        self.c.execute("SELECT * FROM Condiciones")
+        for data in self.c.fetchall():
+           cond = {"Entrada":data[0],"Valor":data[1],"Modificador":data[2]}
+           ListaCondiciones.append(cond)
+        return ListaCondiciones

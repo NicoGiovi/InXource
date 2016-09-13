@@ -132,16 +132,6 @@
      <string>Valor</string>
     </property>
    </widget>
-   <widget class="QListView" name="LstCondiciones">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>100</y>
-      <width>411</width>
-      <height>181</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="BtnAgregarCondicion">
     <property name="geometry">
      <rect>
@@ -153,6 +143,16 @@
     </property>
     <property name="text">
      <string>Agregar</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="LstCondiciones">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>411</width>
+      <height>192</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -204,16 +204,6 @@
      <string>Condiciones</string>
     </property>
    </widget>
-   <widget class="QListView" name="LstEventos">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>401</width>
-      <height>231</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QComboBox" name="CboValor">
     <property name="geometry">
      <rect>
@@ -235,6 +225,16 @@
     </property>
     <property name="text">
      <string>Agregar</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="LstEventos">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>411</width>
+      <height>251</height>
+     </rect>
     </property>
    </widget>
   </widget>

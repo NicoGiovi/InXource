@@ -2,12 +2,13 @@
 
 # Form implementation generated from reading ui file 'C:\OneDrive\Programador InXource\InXource\UI\FrmAgregarEvento.ui'
 #
-# Created: Mon Sep 12 10:22:43 2016
+# Created: Tue Sep 13 14:02:08 2016
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
 
 from PySide import QtCore, QtGui
+
 
 class Ui_FrmAgregarEvento(object):
     def setupUi(self, FrmAgregarEvento):
@@ -44,12 +45,12 @@ class Ui_FrmAgregarEvento(object):
         self.label = QtGui.QLabel(self.groupBox)
         self.label.setGeometry(QtCore.QRect(150, 20, 46, 13))
         self.label.setObjectName("label")
-        self.LstCondiciones = QtGui.QListView(self.groupBox)
-        self.LstCondiciones.setGeometry(QtCore.QRect(10, 100, 411, 181))
-        self.LstCondiciones.setObjectName("LstCondiciones")
         self.BtnAgregarCondicion = QtGui.QPushButton(self.groupBox)
         self.BtnAgregarCondicion.setGeometry(QtCore.QRect(330, 20, 75, 23))
         self.BtnAgregarCondicion.setObjectName("BtnAgregarCondicion")
+        self.LstCondiciones = QtGui.QListWidget(self.groupBox)
+        self.LstCondiciones.setGeometry(QtCore.QRect(10, 100, 411, 192))
+        self.LstCondiciones.setObjectName("LstCondiciones")
         self.groupBox_2 = QtGui.QGroupBox(FrmAgregarEvento)
         self.groupBox_2.setGeometry(QtCore.QRect(10, 320, 421, 331))
         self.groupBox_2.setObjectName("groupBox_2")
@@ -63,15 +64,15 @@ class Ui_FrmAgregarEvento(object):
         self.label_2 = QtGui.QLabel(self.groupBox_2)
         self.label_2.setGeometry(QtCore.QRect(10, 20, 61, 16))
         self.label_2.setObjectName("label_2")
-        self.LstEventos = QtGui.QListView(self.groupBox_2)
-        self.LstEventos.setGeometry(QtCore.QRect(10, 80, 401, 231))
-        self.LstEventos.setObjectName("LstEventos")
         self.CboValor = QtGui.QComboBox(self.groupBox_2)
         self.CboValor.setGeometry(QtCore.QRect(150, 40, 41, 22))
         self.CboValor.setObjectName("CboValor")
         self.BtnAgregarEvento = QtGui.QPushButton(self.groupBox_2)
         self.BtnAgregarEvento.setGeometry(QtCore.QRect(320, 40, 75, 23))
         self.BtnAgregarEvento.setObjectName("BtnAgregarEvento")
+        self.LstEventos = QtGui.QListWidget(self.groupBox_2)
+        self.LstEventos.setGeometry(QtCore.QRect(10, 80, 411, 251))
+        self.LstEventos.setObjectName("LstEventos")
         self.BtnGuardar = QtGui.QPushButton(FrmAgregarEvento)
         self.BtnGuardar.setGeometry(QtCore.QRect(320, 670, 101, 23))
         self.BtnGuardar.setObjectName("BtnGuardar")

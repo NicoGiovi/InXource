@@ -39,8 +39,12 @@ class FrmAgregarEvento(QDialog, Ui_FrmAgregarEvento):
             modificador = "O"
         else:
             modificador = None
-        self.Config.AgregarCondicion(entrada,valor,modificador)
+        self.Config.AgregarCondicion(entrada, valor, modificador)
         print entrada, valor, modificador
+
+        self.LstCondiciones.clear()
+        for Condicion in self.Config.ListarCondiciones():
+            self.LstCondiciones.addItem(str(Condicion))
 
     def ActualizarValue(self):
             if str(self.CboListaCondiciones.currentText()).startswith("In"):
