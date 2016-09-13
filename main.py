@@ -9,7 +9,6 @@ import sys
 import os
 ROOT_DIR = os.path.abspath(sys.path[0])
 CONF_DIR = os.path.join(ROOT_DIR,"Commons")
-print ROOT_DIR
 
 class FrmAgregarEvento(QDialog, Ui_FrmAgregarEvento):
     def __init__(self, parent=None):
@@ -25,9 +24,13 @@ class FrmAgregarEvento(QDialog, Ui_FrmAgregarEvento):
 
         self.CboListaCondiciones.currentIndexChanged.connect(self.ActualizarValue)
         self.BtnAgregarCondicion.clicked.connect(self.AgregarCondicion)
-
+        self.LstCondiciones.clear()
+        for Condicion in self.Config.ListarCondiciones():
+            self.LstCondiciones.addItem(str(Condicion))
     def AgregarCondicion(self):
+
         entrada = str(self.CboListaCondiciones.currentText())
+
         if entrada.startswith("Entrada"):
             valor = str(self.CboValorCondicion.currentText())
         elif entrada.startswith("Temp"):
@@ -40,8 +43,6 @@ class FrmAgregarEvento(QDialog, Ui_FrmAgregarEvento):
         else:
             modificador = None
         self.Config.AgregarCondicion(entrada, valor, modificador)
-        print entrada, valor, modificador
-
         self.LstCondiciones.clear()
         for Condicion in self.Config.ListarCondiciones():
             self.LstCondiciones.addItem(str(Condicion))
