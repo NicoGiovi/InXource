@@ -18,12 +18,29 @@ class FrmAgregarEvento(QDialog, Ui_FrmAgregarEvento):
         self.setupUi(self)
         self.CboValorCondicion.addItem("ON")
         self.CboValorCondicion.addItem("OFF")
-        Config = Db.Configuracion(os.path.join(CONF_DIR,"config.db"))
+        self.Config = Db.Configuracion(os.path.join(CONF_DIR,"config.db"))
 
-        for Condicion in Config.ListarCondiciones():
-            self.CboListaCondiciones.addItem(Condicion)
+        for Entrada in self.Config.ListarEntradas():
+            self.CboListaCondiciones.addItem(str(Entrada))
 
         self.CboListaCondiciones.currentIndexChanged.connect(self.ActualizarValue)
+        self.BtnAgregarCondicion.clicked.connect(self.AgregarCondicion)
+
+    def AgregarCondicion(self):
+        entrada = str(self.CboListaCondiciones.currentText())
+        if entrada.startswith("Entrada"):
+            valor = str(self.CboValorCondicion.currentText())
+        elif entrada.startswith("Temp"):
+            valor = str(self.SpnValorCondicion.text())
+
+        if self.RdbAnd.isChecked():
+            modificador = "Y"
+        elif self.RdbOr.isChecked():
+            modificador = "O"
+        else:
+            modificador = None
+        self.Config.AgregarCondicion(entrada,valor,modificador)
+        print entrada, valor, modificador
 
     def ActualizarValue(self):
             if str(self.CboListaCondiciones.currentText()).startswith("In"):
