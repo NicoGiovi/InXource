@@ -53,7 +53,6 @@ class FrmAgregarEvento(QDialog, Ui_FrmAgregarEvento):
                 self.SpnValorCondicion.hide()
                 self.CboValorCondicion.show()
                 self.CboValorCondicion.setCurrentIndex(0)
-
             if str(self.CboListaCondiciones.currentText()).startswith("Temp"):
                 self.TxtValorCondicion.hide()
                 self.SpnValorCondicion.show()

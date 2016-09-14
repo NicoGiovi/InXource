@@ -7,16 +7,23 @@ class Configuracion:
         self.conexion = sqlite3.connect(self.ConfigFile)
         self.c = self.conexion.cursor()
 
+    def CrearEvento(self,nombre):
+        self.c.execute("INSERT INTO Eventos(Nombre) VALUES (?)",nombre)
+        self.conexion.commit()
+        return self.c.lastrowid
+
     def ListarEntradas(self):
-        ListaCondiciones = []
+        ListaEntradas = []
         self.c.execute("SELECT * FROM Entradas")
         for data in self.c.fetchall():
-            ListaCondiciones.append(data[1])
-        return ListaCondiciones
+            Entrada = {"ID": data[0], "PIN": data[1], "NOMBRE": data[2]}
+            ListaEntradas.append(Entrada)
+        return ListaEntradas
 
     def AgregarCondicion(self,Entrada, Valor,Modificador=None):
         self.c.execute("INSERT INTO Condiciones (Entrada,Valor,Modificador) VALUES (?,?,?)",
                        (Entrada,Valor,Modificador))
+        print self.c.lastrowid
         self.conexion.commit()
 
     def ListarCondiciones(self):
