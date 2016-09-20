@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>451</width>
-    <height>703</height>
+    <height>702</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -26,19 +26,19 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>50</y>
      <width>431</width>
-     <height>301</height>
+     <height>321</height>
     </rect>
    </property>
    <property name="title">
-    <string>Condiciones</string>
+    <string>Progrmacion de Condiciones</string>
    </property>
    <widget class="QRadioButton" name="RdbAnd">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>50</y>
+      <x>210</x>
+      <y>20</y>
       <width>82</width>
       <height>17</height>
      </rect>
@@ -50,8 +50,8 @@
    <widget class="QRadioButton" name="RdbOr">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>70</y>
+      <x>210</x>
+      <y>40</y>
       <width>82</width>
       <height>17</height>
      </rect>
@@ -60,7 +60,7 @@
      <string>O (OR)</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="CboListaCondiciones">
+   <widget class="QComboBox" name="CboListaEntradas">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -136,7 +136,7 @@
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>20</y>
+      <y>40</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -149,10 +149,23 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>100</y>
+      <y>81</y>
       <width>411</width>
-      <height>192</height>
+      <height>211</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="RdbNone">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>60</y>
+      <width>51</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>None</string>
     </property>
    </widget>
   </widget>
@@ -160,15 +173,15 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>320</y>
+     <y>370</y>
      <width>421</width>
-     <height>331</height>
+     <height>291</height>
     </rect>
    </property>
    <property name="title">
-    <string>Eventos</string>
+    <string>Programacion De Acciones</string>
    </property>
-   <widget class="QComboBox" name="CboListaEventos">
+   <widget class="QComboBox" name="CboListaSalidas">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -176,19 +189,6 @@
       <width>131</width>
       <height>22</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="TxtLCDMessage">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>40</y>
-      <width>111</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -201,7 +201,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Condiciones</string>
+     <string>Acciones</string>
     </property>
    </widget>
    <widget class="QComboBox" name="CboValor">
@@ -214,7 +214,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="BtnAgregarEvento">
+   <widget class="QPushButton" name="BtnAgregarAccion">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -227,21 +227,34 @@
      <string>Agregar</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="LstEventos">
+   <widget class="QListWidget" name="LstAcciones">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>80</y>
       <width>411</width>
-      <height>251</height>
+      <height>191</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnFormatLCD">
+    <property name="geometry">
+     <rect>
+      <x>224</x>
+      <y>40</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Formatear LCD</string>
     </property>
    </widget>
   </widget>
   <widget class="QPushButton" name="BtnGuardar">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>330</x>
      <y>670</y>
      <width>101</width>
      <height>23</height>
@@ -254,7 +267,7 @@
   <widget class="QPushButton" name="BtnCerrar">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>240</x>
      <y>670</y>
      <width>75</width>
      <height>23</height>
@@ -264,6 +277,36 @@
     <string>Cerrar</string>
    </property>
   </widget>
+  <widget class="QLineEdit" name="TxtNombreEvento">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>20</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre Del Evento</string>
+   </property>
+  </widget>
+  <zorder>groupBox</zorder>
+  <zorder>groupBox_2</zorder>
+  <zorder>BtnGuardar</zorder>
+  <zorder>BtnCerrar</zorder>
+  <zorder>TxtNombreEvento</zorder>
+  <zorder>label_3</zorder>
+  <zorder>SpnValorCondicion</zorder>
  </widget>
  <resources/>
  <connections/>

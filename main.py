@@ -17,43 +17,56 @@ class FrmAgregarEvento(QDialog, Ui_FrmAgregarEvento):
         self.setupUi(self)
         self.CboValorCondicion.addItem("ON")
         self.CboValorCondicion.addItem("OFF")
-        self.Config = Db.Configuracion(os.path.join(CONF_DIR,"config.db"))
+        self.Config = Db.Eventos(os.path.join(CONF_DIR, "config.db"))
+        self.ListaEntradas = self.Config.ListarEntradas()
+        self.ListaSalidas = self.Config.ListarSalidas()
+        self.ListaCondiciones = []
+        self.ListaAcciones = []
+        for entrada in self.ListaEntradas:
+            self.CboListaEntradas.addItem(entrada["Nombre"])
+        for salida in self.ListaSalidas:
+            self.CboListaSalidas.addItem(salida["Nombre"])
 
-        for Entrada in self.Config.ListarEntradas():
-            self.CboListaCondiciones.addItem(str(Entrada))
-
-        self.CboListaCondiciones.currentIndexChanged.connect(self.ActualizarValue)
+        self.CboListaEntradas.currentIndexChanged.connect(self.ActualizarValue)
         self.BtnAgregarCondicion.clicked.connect(self.AgregarCondicion)
         self.LstCondiciones.clear()
-        for Condicion in self.Config.ListarCondiciones():
-            self.LstCondiciones.addItem(str(Condicion))
+
     def AgregarCondicion(self):
-
-        entrada = str(self.CboListaCondiciones.currentText())
-
-        if entrada.startswith("Entrada"):
-            valor = str(self.CboValorCondicion.currentText())
-        elif entrada.startswith("Temp"):
-            valor = str(self.SpnValorCondicion.text())
+        Entrada = None
+        Valor_Entrada = None
+        Modificador_Entrada = None
+        # --- Parse Condicion ----
+        for entrada in self.ListaEntradas:
+            if entrada['Nombre'] == str(self.CboListaEntradas.currentText()):
+                Entrada = entrada
 
         if self.RdbAnd.isChecked():
-            modificador = "Y"
+            Modificador_Entrada = "Y"
         elif self.RdbOr.isChecked():
-            modificador = "O"
+            Modificador_Entrada = "O"
         else:
-            modificador = None
-        self.Config.AgregarCondicion(entrada, valor, modificador)
+            Modificador_Entrada = None
+
+        if Entrada['Tipo'] == "D":
+            Valor_Entrada = self.CboValorCondicion.currentText()
+        elif Entrada['Tipo'] == "S":
+            Valor_Entrada = self.SpnValorCondicion.text()
+
+        condicion = {"Entrada": Entrada, "Valor": Valor_Entrada, "Modificador": Modificador_Entrada}
+        self.ListaCondiciones.append(condicion)
         self.LstCondiciones.clear()
-        for Condicion in self.Config.ListarCondiciones():
-            self.LstCondiciones.addItem(str(Condicion))
+        for condicion in self.ListaCondiciones:
+            texto = str(condicion['Entrada']['Nombre'])+str(condicion['Valor'])+str(condicion['Modificador'])
+            self.LstCondiciones.addItem(texto)
+        #--- Fin Parse Condicion ----
 
     def ActualizarValue(self):
-            if str(self.CboListaCondiciones.currentText()).startswith("In"):
+            if str(self.CboListaEntradas.currentText()).startswith("En"):
                 self.TxtValorCondicion.hide()
                 self.SpnValorCondicion.hide()
                 self.CboValorCondicion.show()
                 self.CboValorCondicion.setCurrentIndex(0)
-            if str(self.CboListaCondiciones.currentText()).startswith("Temp"):
+            if str(self.CboListaEntradas.currentText()).startswith("Temp"):
                 self.TxtValorCondicion.hide()
                 self.SpnValorCondicion.show()
                 self.CboValorCondicion.hide()
