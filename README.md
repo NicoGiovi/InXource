@@ -12,4 +12,4 @@ Crear una interfaz mediante la cual el usuario usando solo lenguaje coloquial pu
 
 ![Screenshot](FrmAgregarEvento.png)
 
-Para poder llevarlo a cabo se realizo se realiza una conversion del pseudocodigo creador por la lista de eventos y acciones a codigo ANSI C, y posteriormente se realiza en forma automatica la compilacion (Preprocesing, Compilation, Assemble, Link) y posteriormente el codigo compilado se graba en el micrcontrolador usando el bootloader de https://pinguino.cc.
+Para poder llevarlo a cabo se realizo se realiza una conversion del pseudocodigo creador por la lista de eventos y acciones a codigo ANSI C, y posteriormente se realiza en forma automatica la compilacion (Preprocesing, Compilation, Assemble, Link) y luego el codigo compilado se graba en el micrcontrolador usando el bootloader de https://pinguino.cc.
